@@ -15,10 +15,10 @@
                     <x-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
                     </x-nav-link>
-                    <x-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('scheduled')">
+                    <x-nav-link href="{{ route('scheduled') }}" :active="request()->routeIs('scheduled')">
                         {{ __('Scheduled') }}
                     </x-nav-link>
-                    <x-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('scraped')">
+                    <x-nav-link href="{{ route('scraped') }}" :active="request()->routeIs('scraped')">
                         {{ __('Scraped') }}
                     </x-nav-link>
                 </div>
@@ -148,10 +148,10 @@
             <x-responsive-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
                 {{ __('Dashboard') }}
             </x-responsive-nav-link>
-            <x-responsive-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('scheduled')">
+            <x-responsive-nav-link href="{{ route('scheduled') }}" :active="request()->routeIs('scheduled')">
                 {{ __('Scheduled') }}
             </x-responsive-nav-link>
-            <x-responsive-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('scraped')">
+            <x-responsive-nav-link href="{{ route('scraped') }}" :active="request()->routeIs('scraped')">
                 {{ __('Scraped') }}
             </x-responsive-nav-link>
         </div>
