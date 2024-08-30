@@ -8,11 +8,11 @@ Route::group(['middleware' => ['auth', 'verified']], function () {
     })->name('dashboard');
 
     Route::get('/scheduled', function () {
-        return view('dashboard');
+        return view('scheduled');
     })->name('scheduled');
 
     Route::get('/scraped', function () {
-        return view('dashboard');
+        return view('scraped');
     })->name('scraped');
 
 });
