@@ -14,7 +14,7 @@
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
 
-        <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+        <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js', 'resources/js/datagrid.js'])
