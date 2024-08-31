@@ -50,7 +50,7 @@ textarea {
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-xl-6 mb-3">
+                        <div class="col-xl-12 mb-3">
                             <button disabled id="scrape_btn" class="btn btn-lg w-100 bg-primary text-white mb-3 scraper_fld">Get Info</button>
                         </div>
                     </div>
