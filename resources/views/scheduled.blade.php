@@ -45,7 +45,7 @@
     let modal = "#installation_details";
     let datagrid = "#gridContainer";
     let datasource = '/data/scheduled';
-    let columns = ['campaign', 'complete_name', 'mobile_number', 'province', 'city', 'vendor', 'SGT Name', 'status', 'Registration Date', 'Last Update'];
+    let columns = ['user_id', 'certificate_number', 'data', 'status', 'add_timestamp', 'update_timestamp'];
 
     $(() => {
 
