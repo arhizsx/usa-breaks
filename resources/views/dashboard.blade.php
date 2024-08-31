@@ -16,9 +16,11 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-12">
+                        <div class="col-8">
                             <label for="filename" class="form-label">Filename</label>
                             <input type="text" class="form-control" name="filename">
+                        </div>
+                        <div class="col-4">
                         </div>
                     </div>
                 </div>
