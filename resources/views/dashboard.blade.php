@@ -36,7 +36,7 @@ textarea {
                                 </div>
                                 <div class="flex-fill">
                                     <label for="credits" class="form-label">Scrape Credits</label>
-                                    <input type="number" disabled class="form-control mb-3" name="credits" id="credits" value="UNLIMITED">
+                                    <input type="text" disabled class="form-control mb-3" name="credits" id="credits" value="UNLIMITED">
                                 </div>
                             </div>
                             <label for="filename" class="form-label">Filename</label>
