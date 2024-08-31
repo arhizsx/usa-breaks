@@ -22,7 +22,7 @@ textarea {
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
                 <div class="container-fluid p-4">
-                    <div class="row">
+                    <div class="row mb-3">
                         <div class="col-8">
                             <label for="filename" class="form-label">Filename</label>
                             <input type="text" class="form-control" name="filename" id="filename">
