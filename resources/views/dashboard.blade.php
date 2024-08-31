@@ -63,14 +63,22 @@ $(document).on("keyup", ".scraper_fld", function(){
 
     var certs= $(this).val().split(/\r?\n/);
 
-    if( certs.length > 0 && $(document).find("[name='filename']").val() ){
+    if( certs.length > 0 ){
 
         $(document).find("[name='items']").val( certs.length );
-        $(document).find("#scrape_btn").prop("disabled", false);
 
     } else {
 
         $(document).find("[name='items']").val(0);
+
+    }
+
+    if( certs.length > 0 && $(document).find("[name='filename']").val() ){
+
+        $(document).find("#scrape_btn").prop("disabled", false);
+
+    } else {
+
         $(document).find("#scrape_btn").prop("disabled", true);
 
     }
