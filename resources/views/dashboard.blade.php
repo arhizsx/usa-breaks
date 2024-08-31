@@ -71,11 +71,7 @@ expandTextarea('certificate_numbers');
 
 $(document).on("keyup", "#certificate_numbers", function(){
 
-    console.log($(this).val());
-
-    var lht = parseInt($(this).css('lineHeight'),10);
-    var lines = parseInt($(this).attr('scrollHeight') ) / lht;
-    console.log(lines);
+    console.log($(this).val().split(/\r?\n/));
 
 });
 
