@@ -61,15 +61,16 @@ textarea {
 
 $(document).find("[name='filename']").keypress(function(e){
     console.log(e);
-    function getIt();
+    getIt();
 });
 
 $(document).find("[name='certificate_numbers']").keypress(function(e){
     console.log(e);
-    function getIt();
+    getIt();
 });
 
 function getIt(){
+
     var certs= $(document).find("[name='certificate_numbers']").val().split(/\r?\n/);
 
     if( certs.length > 0 ){
