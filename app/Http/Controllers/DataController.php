@@ -72,6 +72,14 @@ class DataController extends Controller
 
         $certificates = preg_split("/\r\n|\n|\r/", $request->certificate_numbers);
 
+        $order = new Orders;
+
+        $order->filename = $request->filename . ".zip";
+        $order->certificates = count( $certificates );
+        $order->status = "ACTIVE";
+
+        $order->save();
+
         return ["error" => false, "filename" => $request->filename, "certificates" => $certificates, "user_id" => $request->user_id	];
 
     }
