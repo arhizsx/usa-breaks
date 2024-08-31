@@ -56,10 +56,21 @@ class DataController extends Controller
 
     function data_post( Request $request ){
 
+        switch( $request->action ){
+            case "post_items";
+                return $this->postItems($request);
+                break;
+            default:
+                return ["error"=> true, "message" => "Action not configured"];
+        }
+
 
         return $request;
-
     }
 
+    function postItems($request){
+
+        return $request;
+    }
 
 }
