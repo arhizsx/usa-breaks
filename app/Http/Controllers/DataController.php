@@ -84,6 +84,9 @@ class DataController extends Controller
 
         if( property_exists($order, "id") ){
 
+
+            return $order;
+
             foreach( $certificates as $certificate ){
 
                 $scrape = new Scraper;
