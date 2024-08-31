@@ -82,7 +82,7 @@ class DataController extends Controller
         $order->save();
 
 
-        if( $order ){
+        if( property_exists($order, "id") ){
 
             foreach( $certificates as $certificate ){
 
