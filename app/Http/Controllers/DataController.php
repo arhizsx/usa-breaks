@@ -16,4 +16,12 @@ class DataController extends Controller
 
     }
 
+    function data_post( Request $request ){
+
+
+        return $request;
+
+    }
+
+
 }

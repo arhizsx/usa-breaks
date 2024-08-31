@@ -19,4 +19,6 @@ Route::group(['middleware' => ['auth', 'verified']], function () {
 
     Route::get('/data/{action}',  [DataController::class, 'data']);
 
+    Route::post('/data/post',  [DataController::class, 'data_post']);
+
 });

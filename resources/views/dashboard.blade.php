@@ -24,7 +24,8 @@ textarea {
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
                 <div class="container-fluid p-4">
-                    <div id="scrape_form">
+                    <div id="scrape_form_box">
+                        <form id="scrape_form">
                         <div class="row">
                             <div class="col-xl-6 mb-3">
                                 <div class="d-flex">
@@ -55,6 +56,7 @@ textarea {
                                 <button disabled id="scrape_btn" class="btn btn-lg w-100 bg-primary text-white scraper_fld">Get Info</button>
                             </div>
                         </div>
+                        </form>
                     </div>
                     <div id="loading" class="d-none">
                         <div class="row">
@@ -114,10 +116,48 @@ function getIt(){
 
 $(document).on("click", "#scrape_btn", function(){
 
-    $(document).find("#scrape_form").addClass("d-none");
+    $(document).find("#scrape_form_box").addClass("d-none");
     $(document).find("#loading").removeClass("d-none");
 
+    var scrapes = postScrapes();
+
+    $.when( scrapes ).done( function( scrapes ){
+
+        console.log( scrapes );
+        $(document).find("#scrape_form_box").removeClass("d-none");
+        $(document).find("#loading").addClass("d-none");
+
+
+    });
+
+
 });
+
+
+function postScrapes(){
+
+    var defObject = $.Deferred();  // create a deferred object.
+
+	let form = new FormData( $("#scrape_form")[0] );
+
+	$.ajax({
+		type: 'post',
+		url: "/data/post",
+		data: form,
+		enctype: 'multipart/form-data',
+		processData: false,
+		contentType: false,
+		success: function(resp){
+			defObject.resolve(resp);    //resolve promise and pass the response.
+		},
+		error: function(){
+			console.log("Error in AJAX");
+		}
+	});
+
+    return defObject.promise();
+
+}
 
 
 
