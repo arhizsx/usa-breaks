@@ -8,7 +8,7 @@ textarea {
   width:100%; /* changed from 96 to 100% */
   display:block;
   /* margin:0px auto; not needed since i have width 100% now */
-  font-size: 2em !important;
+  font-size: 1.2em !important;
   min-height: 80% !important;
 }
 </style>
