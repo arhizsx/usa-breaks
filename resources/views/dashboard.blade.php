@@ -8,7 +8,7 @@
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
-                <div class="container-fluid p-3">
+                <div class="container-fluid p-4">
                     <div class="row mb-3">
                         <div class="col-12">
                             <label for="certificate_numbers" class="form-label">Certificate Numbers</label>
