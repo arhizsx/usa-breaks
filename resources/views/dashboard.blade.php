@@ -63,8 +63,6 @@ $(document).on("keyup blur change", ".scraper_fld", function(e){
 
     console.log(e);
 
-    $(this).trigger("change");
-
     var certs= $(document).find("[name='certificate_numbers']").val().split(/\r?\n/);
 
     if( certs.length > 0 ){
