@@ -71,7 +71,9 @@ expandTextarea('certificate_numbers');
 
 $(document).on("keyup", "#certificate_numbers", function(){
 
-    console.log($(this).val().split(/\r?\n/));
+    var certs= $(this).val().split(/\r?\n/);
+
+    $(document).find("[name='items']").val( certs.length );
 
 });
 
