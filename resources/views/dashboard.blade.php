@@ -11,14 +11,14 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-12">
-                        <label>Filename</label>
-                        <input type="text" class="form-control">
+                            <label for="filename" class="form-label">Filename</label>
+                            <input type="text" class="form-control" name="filename">
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-12">
-                            <label>Certificate Numbers</label>
-                            <textarea class="form-control"></textarea>
+                            <label for="certificate_numbers" class="form-label">Certificate Numbers</label>
+                            <textarea class="form-control" name="certificate_numbers"></textarea>
                         </div>
                     </div>
                 </div>
