@@ -29,10 +29,16 @@ textarea {
                             <textarea class="form-control mb-3" name="certificate_numbers" id="certificate_numbers"></textarea>
                         </div>
                         <div class="col-6">
-                            <label for="items" class="form-label">Items to Scrape</label>
-                            <input type="number" disabled class="form-control mb-3" name="items" id="items">
-                            <label for="credits" class="form-label">Scrape Credits</label>
-                            <input type="number" disabled class="form-control mb-3" name="credits" id="credits">
+                            <div class="d-flex">
+                                <div class="flex-fill">
+                                    <label for="items" class="form-label">Items to Scrape</label>
+                                    <input type="number" disabled class="form-control mb-3" name="items" id="items">
+                                </div>
+                                <div class="flex-fill">
+                                    <label for="credits" class="form-label">Scrape Credits</label>
+                                    <input type="number" disabled class="form-control mb-3" name="credits" id="credits">
+                                </div>
+                            </div>
                             <label for="filename" class="form-label">Filename</label>
                             <input type="text" class="form-control mb-3" name="filename" id="filename">
                             <button class="btn btn-lg w-100 bg-primary text-white mb-3">Scrape</button>
