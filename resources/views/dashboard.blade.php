@@ -25,7 +25,7 @@ textarea {
             <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
                 <div class="container-fluid p-4">
                     <div class="row">
-                        <div class="col-xl-6">
+                        <div class="col-xl-6 mb-3">
                             <label for="certificate_numbers" class="form-label">Certificate Numbers</label>
                             <textarea class="form-control mb-3" name="certificate_numbers" id="certificate_numbers"></textarea>
                         </div>
