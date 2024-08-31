@@ -70,7 +70,10 @@ class DataController extends Controller
 
     function postItems($request){
 
-        return $request;
+        $certificates = preg_split("/\r\n|\n|\r/", $request->certificate_numbers);
+
+        return ["error" => false, "filename" => $request->filename, "certificates" => $certificates, "user_id" => $request->user_id	];
+
     }
 
 }
