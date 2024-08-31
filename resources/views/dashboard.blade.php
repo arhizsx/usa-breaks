@@ -59,7 +59,7 @@ textarea {
 <script>
 
 
-$(document).on("keypress", ".scraper_fld", function(){
+$(document).on("keyup", ".scraper_fld", function(){
 
     $(this).trigger("change");
 
