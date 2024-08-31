@@ -42,7 +42,7 @@ textarea {
                             </div>
                             <label for="filename" class="form-label">Filename</label>
                             <input type="text" class="form-control mb-3" name="filename" id="filename">
-                            <button disabled class="btn btn-lg w-100 bg-primary text-white mb-3">Scrape</button>
+                            <button disabled id="scrape_btn" class="btn btn-lg w-100 bg-primary text-white mb-3">Scrape</button>
                         </div>
 
                         <div class="col-xl-6 mb-3">
@@ -73,7 +73,14 @@ $(document).on("keyup", "#certificate_numbers", function(){
 
     var certs= $(this).val().split(/\r?\n/);
 
-    $(document).find("[name='items']").val( certs.length );
+
+    if( certs.length > 0 ){
+        $(document).find("[name='items']").val( certs.length );
+        $(document).find("#scrape_btn").prop("disabled", false);
+    } else {
+        $(document).find("[name='items']").val(0);
+        $(document).find("#scrape_btn").prop("disabled", true);
+    }
 
 });
 
