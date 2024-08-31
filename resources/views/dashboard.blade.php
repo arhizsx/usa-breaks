@@ -59,7 +59,7 @@ textarea {
 <script>
 
 
-$(document).find(".scraper_fld").keypress(function(){
+$(document).find(".scraper_fld").keypress(function(e){
 
     console.log(e);
 
