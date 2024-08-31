@@ -9,16 +9,16 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
                 <div class="container-fluid p-3">
-                    <div class="row">
+                    <div class="row mb-3">
                         <div class="col-12">
-                            <label for="filename" class="form-label">Filename</label>
-                            <input type="text" class="form-control" name="filename">
+                            <label for="certificate_numbers" class="form-label">Certificate Numbers</label>
+                            <textarea class="form-control" name="certificate_numbers"></textarea>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-12">
-                            <label for="certificate_numbers" class="form-label">Certificate Numbers</label>
-                            <textarea class="form-control" name="certificate_numbers"></textarea>
+                            <label for="filename" class="form-label">Filename</label>
+                            <input type="text" class="form-control" name="filename">
                         </div>
                     </div>
                 </div>
