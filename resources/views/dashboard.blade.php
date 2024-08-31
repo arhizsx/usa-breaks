@@ -21,7 +21,7 @@
                             <input type="text" class="form-control" name="filename">
                         </div>
                         <div class="col-4">
-                            <button class="btn btn-lg w-100 h-100 bg-primary">Scrape</button>
+                            <button class="btn btn-lg w-100 h-100 bg-outline-primary">Scrape</button>
                         </div>
                     </div>
                 </div>
