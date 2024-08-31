@@ -180,7 +180,17 @@ function postScrapes(){
 
 }
 
+    let x= "";
+    let modal = "#installation_details";
+    let datagrid = "#gridContainer";
+    let datasource = '/data/scheduled';
+    let columns = ['user_id', 'certificate_number', 'data', 'status', 'add_timestamp', 'update_timestamp'];
 
+    $(() => {
+
+        $(datagrid).setDatagrid( modal, datasource, columns );
+
+    });
 
 
 </script>
