@@ -114,7 +114,9 @@ function getIt(){
     }
 }
 
-$(document).on("click", "#scrape_btn", function(){
+$(document).on("click", "#scrape_btn", function(e){
+
+    e.preventDefault();
 
     $(document).find("#scrape_form_box").addClass("d-none");
     $(document).find("#loading").removeClass("d-none");
