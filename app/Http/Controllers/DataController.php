@@ -84,9 +84,6 @@ class DataController extends Controller
 
         if( $order->id > 0 ){
 
-
-            return $order;
-
             foreach( $certificates as $certificate ){
 
                 $scrape = new Scraper;
@@ -95,10 +92,12 @@ class DataController extends Controller
                 $scrape->certificate_number = $certificate;
                 $scrape->status = "QUEUED";
 
+                $scrape->save();
+
             }
 
         } else {
-            return "No";
+            return ["error" => true, "message" => "ORDER NOT CREATED"];
         }
 
         return ["error" => false, "filename" => $request->filename, "certificates" => $certificates, "user_id" => $request->user_id, "order" => $order];
