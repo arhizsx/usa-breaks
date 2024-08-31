@@ -151,6 +151,9 @@ $(document).on("click", "#scrape_btn", function(e){
 
         $("#gridContainer").dxDataGrid("instance").refresh();
 
+        $(document).find("[name='filename']").val('');
+        $(document).find("[name='certificate_numbers']").val('');
+
 
     });
 
