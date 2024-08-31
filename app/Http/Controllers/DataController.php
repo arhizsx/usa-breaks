@@ -81,7 +81,6 @@ class DataController extends Controller
 
         $order->save();
 
-        return $order->id;
 
         if( property_exists($order, "id") ){
 
@@ -98,6 +97,8 @@ class DataController extends Controller
 
             }
 
+        } else {
+            return "No";
         }
 
         return ["error" => false, "filename" => $request->filename, "certificates" => $certificates, "user_id" => $request->user_id, "order" => $order];
