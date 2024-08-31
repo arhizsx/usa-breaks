@@ -88,6 +88,7 @@ class DataController extends Controller
 
                 $scrape = new Scraper;
 
+                $scrape->order_id =$order->id;
                 $scrape->user_id = Auth::user()->id;
                 $scrape->certificate_number = $certificate;
                 $scrape->status = "QUEUED";
