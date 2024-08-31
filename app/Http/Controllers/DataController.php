@@ -74,6 +74,7 @@ class DataController extends Controller
 
         $order = new Orders;
 
+        $order->user_id = Auth::user()->id;
         $order->filename = $request->filename . ".zip";
         $order->certificates = count( $certificates );
         $order->status = "ACTIVE";
