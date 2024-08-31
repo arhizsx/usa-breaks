@@ -8,12 +8,20 @@
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
-                <label>Filename</label>
-                <input type="text" class="form-control">
-                <label>Certificate Numbers</label>
-                <textarea>
-
-                </textarea>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                        <label>Filename</label>
+                        <input type="text" class="form-control">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <label>Certificate Numbers</label>
+                            <textarea class="form-control"></textarea>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
