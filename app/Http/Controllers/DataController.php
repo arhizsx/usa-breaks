@@ -82,7 +82,7 @@ class DataController extends Controller
         $order->save();
 
 
-        if( property_exists($order, "id") ){
+        if( $order->id > 0 ){
 
 
             return $order;
