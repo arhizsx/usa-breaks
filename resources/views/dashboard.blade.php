@@ -58,28 +58,21 @@ textarea {
 </x-app-layout>
 <script>
 
-function expandTextarea(id) {
-    document.getElementById(id).addEventListener('keyup', function() {
-        this.style.overflow = 'hidden';
-        this.style.height = 0;
-        this.style.height = this.scrollHeight + 'px';
-    }, false);
-
-}
-
-// expandTextarea('certificate_numbers');
 
 $(document).on("keyup", "#certificate_numbers", function(){
 
     var certs= $(this).val().split(/\r?\n/);
 
+    if( certs.length > 0 && $(document).find("[name-='filename']").val().length > 4 ){
 
-    if( certs.length > 0 ){
         $(document).find("[name='items']").val( certs.length );
         $(document).find("#scrape_btn").prop("disabled", false);
+
     } else {
+
         $(document).find("[name='items']").val(0);
         $(document).find("#scrape_btn").prop("disabled", true);
+
     }
 
 });
