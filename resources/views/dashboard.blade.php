@@ -65,7 +65,7 @@ $(document).on("keyup", "#certificate_numbers", function(){
 
     console.log($(document).find("[name-='filename']").val().length);
 
-    if( certs.length > 0 && $(document).find("[name-='filename']").val().length > 4 ){
+    if( certs.length > 0 && $(document).find("[name-='filename']").val() ){
 
         $(document).find("[name='items']").val( certs.length );
         $(document).find("#scrape_btn").prop("disabled", false);
