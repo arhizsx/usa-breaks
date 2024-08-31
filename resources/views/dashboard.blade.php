@@ -63,16 +63,18 @@ function expandTextarea(id) {
         this.style.overflow = 'hidden';
         this.style.height = 0;
         this.style.height = this.scrollHeight + 'px';
-
-
-        var lht = parseInt($(this).css('lineHeight'),10);
-        var lines = parseInt($(this).attr('scrollHeight') ) / lht;
-        console.log(lines);
-
     }, false);
 
 }
 
 expandTextarea('certificate_numbers');
+
+$(document).on("change", "#certificate_numbers", function(){
+
+    var lht = parseInt($(this).css('lineHeight'),10);
+    var lines = parseInt($(this).attr('scrollHeight') ) / lht;
+    console.log(lines);
+
+});
 
 </script>
