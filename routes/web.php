@@ -17,6 +17,12 @@ Route::group(['middleware' => ['auth', 'verified']], function () {
         return view('scraped');
     })->name('scraped');
 
+    Route::get('/orders', function () {
+        return view('orders');
+    })->name('orders');
+
+
+
     Route::get('/data/{action}',  [DataController::class, 'data']);
 
     Route::post('/data/post',  [DataController::class, 'data_post']);
