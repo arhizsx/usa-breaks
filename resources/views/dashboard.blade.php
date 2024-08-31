@@ -28,7 +28,7 @@ textarea {
                         <div class="col-xl-6 mb-3">
                             <div class="d-flex">
                                 <div class="flex-fill">
-                                    <label for="items" class="form-label">Items to Scrape</label>
+                                    <label for="items" class="form-label">Items</label>
                                     <input type="number" disabled class="form-control mb-3" name="items" id="items">
                                 </div>
                                 <div class="flex-fill">
