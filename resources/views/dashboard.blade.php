@@ -27,6 +27,7 @@ textarea {
                     <div id="scrape_form_box">
                         <form id="scrape_form">
                             @csrf
+                            <input type="hidden" name="user_id" value="{{ \Auth::user()->id }}">
                             <div class="row">
                                 <div class="col-xl-6 mb-3">
                                     <div class="d-flex">
