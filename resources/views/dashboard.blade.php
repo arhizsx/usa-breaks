@@ -185,7 +185,7 @@ function postScrapes(){
     let modal = "#installation_details";
     let datagrid = "#gridContainer";
     let datasource = '/data/orders_active';
-    let columns = ['id', 'filename', 'certificates', 'status', 'add_timestamp', 'update_timestamp'];
+    let columns = ['id', 'filename', 'certificates', 'status', 'created_at', 'updated_at'];
 
     $(() => {
 
