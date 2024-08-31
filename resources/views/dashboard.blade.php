@@ -24,18 +24,14 @@ textarea {
             <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
                 <div class="container-fluid p-4">
                     <div class="row mb-3">
-                        <div class="col-8">
-                            <label for="filename" class="form-label">Filename</label>
-                            <input type="text" class="form-control" name="filename" id="filename">
-                        </div>
-                        <div class="col-4 align-items-end d-flex ">
-                            <button class="btn btn-lg w-100 bg-primary text-white">Scrape</button>
-                        </div>
-                    </div>
-                    <div class="row mb-3">
-                        <div class="col-12">
+                        <div class="col-6">
                             <label for="certificate_numbers" class="form-label">Certificate Numbers</label>
                             <textarea class="form-control" name="certificate_numbers" id="certificate_numbers"></textarea>
+                        </div>
+                        <div class="col-6">
+                            <label for="filename" class="form-label">Filename</label>
+                            <input type="text" class="form-control" name="filename" id="filename">
+                            <button class="btn btn-lg w-100 bg-primary text-white">Scrape</button>
                         </div>
                     </div>
                 </div>
