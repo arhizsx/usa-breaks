@@ -42,12 +42,12 @@ textarea {
                             </div>
                             <label for="filename" class="form-label">Filename</label>
                             <input type="text" class="form-control mb-3" name="filename" id="filename">
-                            <button disabled id="scrape_btn" class="btn btn-lg w-100 bg-primary text-white mb-3">Get Info</button>
+                            <button disabled id="scrape_btn" class="btn btn-lg w-100 bg-primary text-white mb-3 scraper_fld">Get Info</button>
                         </div>
 
                         <div class="col-xl-6 mb-3">
                             <label for="certificate_numbers" class="form-label">Certificate Numbers</label>
-                            <textarea class="form-control mb-3" name="certificate_numbers" id="certificate_numbers"></textarea>
+                            <textarea class="form-control mb-3 scraper_fld" name="certificate_numbers" id="certificate_numbers"></textarea>
                         </div>
                     </div>
                 </div>
@@ -59,11 +59,9 @@ textarea {
 <script>
 
 
-$(document).on("keyup", "#certificate_numbers", function(){
+$(document).on("keyup", ".scraper_fld", function(){
 
     var certs= $(this).val().split(/\r?\n/);
-
-    console.log($(document).find("[name='filename']").val().length);
 
     if( certs.length > 0 && $(document).find("[name='filename']").val() ){
 
