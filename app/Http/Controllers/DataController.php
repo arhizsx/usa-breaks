@@ -22,6 +22,14 @@ class DataController extends Controller
                             ->get();
                 break;
 
+            case "orders":
+
+                $data = Orders::where("user_id", Auth::user()->id )
+                            ->whereNot("status", "ACTIVE")
+                            ->orderBy("id", "desc")
+                            ->get();
+                break;
+
             case "scheduled":
 
                 $data = Scraper::where("status", "SCHEDULED")
