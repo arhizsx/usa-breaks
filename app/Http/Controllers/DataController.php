@@ -81,7 +81,9 @@ class DataController extends Controller
 
         $order->save();
 
-        return ["error" => false, "filename" => $request->filename, "certificates" => $certificates, "user_id" => $request->user_id	];
+
+
+        return ["error" => false, "filename" => $request->filename, "certificates" => $certificates, "user_id" => $request->user_id, "order" => $order];
 
     }
 
