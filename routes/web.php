@@ -13,7 +13,7 @@ Route::group(['middleware' => ['auth', 'verified']], function () {
         return view('scheduled');
     })->name('scheduled');
 
-    Route::get('/scraped', function () {
+    Route::get('/processed', function () {
         return view('scraped');
     })->name('scraped');
 

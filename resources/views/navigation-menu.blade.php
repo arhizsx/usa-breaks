@@ -19,7 +19,7 @@
                         {{ __('Scheduled') }}
                     </x-nav-link>
                     <x-nav-link href="{{ route('scraped') }}" :active="request()->routeIs('scraped')">
-                        {{ __('Scraped') }}
+                        {{ __('Processed') }}
                     </x-nav-link>
                 </div>
             </div>
@@ -152,7 +152,7 @@
                 {{ __('Scheduled') }}
             </x-responsive-nav-link>
             <x-responsive-nav-link href="{{ route('scraped') }}" :active="request()->routeIs('scraped')">
-                {{ __('Scraped') }}
+                {{ __('Processed') }}
             </x-responsive-nav-link>
         </div>
 
