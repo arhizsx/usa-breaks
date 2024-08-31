@@ -59,7 +59,7 @@ textarea {
 <script>
 
 
-$(document).on("keyup focusout blur", ".scraper_fld", function(e){
+$(document).on("keyup blur", ".scraper_fld", function(e){
 
     console.log(e);
 
