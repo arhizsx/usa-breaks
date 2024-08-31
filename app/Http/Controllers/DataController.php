@@ -10,7 +10,28 @@ class DataController extends Controller
 
     function data( $action) {
 
-        $data = Scraper::where("status", "SCHEDULED")->get();
+        switch( $action ){
+
+            case "orders":
+
+                $data = Scraper::where("status", "SCHEDULED")->get();
+                break;
+
+            case "scheduled":
+
+                $data = Scraper::where("status", "SCHEDULED")->get();
+                break;
+
+            case "scraped":
+
+                $data = Scraper::where("status", "PROCESSED")->get();
+                break;
+
+            default:
+
+                $data= [];
+                break;
+        }
 
         return $data;
 
