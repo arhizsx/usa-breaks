@@ -42,7 +42,7 @@ textarea {
                             </div>
                             <label for="filename" class="form-label">Filename</label>
                             <input type="text" class="form-control mb-3" name="filename" id="filename">
-                            <button class="btn btn-lg w-100 bg-primary text-white mb-3">Scrape</button>
+                            <button disabled class="btn btn-lg w-100 bg-primary text-white mb-3">Scrape</button>
                         </div>
 
                         <div class="col-xl-6 mb-3">
