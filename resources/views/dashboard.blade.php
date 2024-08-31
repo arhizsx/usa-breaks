@@ -60,9 +60,16 @@ textarea {
 
 
 $(document).find("[name='filename']").keypress(function(e){
-
     console.log(e);
+    function getIt();
+});
 
+$(document).find("[name='certificate_numbers']").keypress(function(e){
+    console.log(e);
+    function getIt();
+});
+
+function getIt(){
     var certs= $(document).find("[name='certificate_numbers']").val().split(/\r?\n/);
 
     if( certs.length > 0 ){
@@ -84,13 +91,6 @@ $(document).find("[name='filename']").keypress(function(e){
         $(document).find("#scrape_btn").prop("disabled", true);
 
     }
-
-
-});
-
-$(document).on("keyup blur", ".scraper_fld", function(e){
-
-
-});
+}
 
 </script>
