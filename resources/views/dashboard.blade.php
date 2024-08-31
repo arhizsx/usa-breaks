@@ -59,12 +59,12 @@ textarea {
 <script>
 
 
-$(document).find("[name='filename']").keypress(function(e){
+$(document).find("[name='filename']").keyup(function(e){
     console.log(e);
     getIt();
 });
 
-$(document).find("[name='certificate_numbers']").keypress(function(e){
+$(document).find("[name='certificate_numbers']").keyup(function(e){
     console.log(e);
     getIt();
 });
@@ -73,7 +73,7 @@ function getIt(){
 
     var certs= $(document).find("[name='certificate_numbers']").val().split(/\r?\n/);
 
-    if( certs.length > 1 ){
+    if( certs.length >= 1 ){
 
         $(document).find("[name='items']").val( certs.length );
 
