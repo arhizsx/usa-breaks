@@ -153,6 +153,8 @@ $(document).on("click", "#scrape_btn", function(e){
 
         $(document).find("[name='filename']").val('');
         $(document).find("[name='certificate_numbers']").val('');
+        $(document).find("[name='items']").val(0);
+
 
 
     });
