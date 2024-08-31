@@ -51,10 +51,12 @@
 
         $(datagrid).setDatagrid( modal, datasource, columns );
 
+
+        $(document).on("click", "#scrape_btn", function(){
+            console.log("go");
+        });
+
     });
 
-    $(document).on("click", "#scrape_btn", function(){
-        console.log("go");
-    });
 
 </script>
