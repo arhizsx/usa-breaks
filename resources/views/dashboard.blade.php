@@ -103,4 +103,9 @@ function getIt(){
     }
 }
 
+$(document).on("click", "#scrape_btn", function(){
+    console.log("go");
+});
+
+
 </script>
