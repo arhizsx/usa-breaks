@@ -14,9 +14,10 @@ class DataController extends Controller
 
         switch( $action ){
 
-            case "orders":
+            case "orders_active":
 
                 $data = Orders::where("user_id", Auth::user()->id )
+                            ->where("status", "ACTIVE")
                             ->orderBy("id", "desc")
                             ->get();
                 break;
