@@ -73,11 +73,16 @@ function getIt(){
 
     var certs= $(document).find("[name='certificate_numbers']").val().split(/\r?\n/);
 
-    console.log(certs);
+    var ctr = 0;
+    $.each(certs, function(k, v){
+        if( v.length > 0 ){
+            ctr = ctr + 1;
+        }
+    });
 
-    if( certs.length >= 1 ){
+    if( ctr >= 1 ){
 
-        $(document).find("[name='items']").val( certs.length );
+        $(document).find("[name='items']").val( ctr );
 
     } else {
 
@@ -85,7 +90,7 @@ function getIt(){
 
     }
 
-    if( certs.length > 0 && $(document).find("[name='filename']").val().length > 4 ){
+    if( ctr > 0 && $(document).find("[name='filename']").val().length > 4 ){
 
         $(document).find("#scrape_btn").prop("disabled", false);
 
