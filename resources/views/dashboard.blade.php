@@ -20,8 +20,8 @@
                             <label for="filename" class="form-label">Filename</label>
                             <input type="text" class="form-control" name="filename">
                         </div>
-                        <div class="col-4">
-                            <button class="btn btn-lg w-100 h-100 bg-primary text-white">Scrape</button>
+                        <div class="col-4 align-items-end">
+                            <button class="btn btn-lg w-100 bg-primary text-white">Scrape</button>
                         </div>
                     </div>
                 </div>
