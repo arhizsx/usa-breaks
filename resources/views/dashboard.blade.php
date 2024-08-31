@@ -66,7 +66,7 @@ function expandTextarea(id) {
     }, false);
 
     var lht = parseInt($('#certificate_numbers').css('lineHeight'),10);
-    var lines = $('#certificate_numbers').attr('scrollHeight') / lht;
+    var lines = parseInt($('#certificate_numbers').attr('scrollHeight') ) / lht;
     console.log(lines);
 }
 
