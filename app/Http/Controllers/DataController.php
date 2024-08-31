@@ -9,7 +9,9 @@ class DataController extends Controller
 
     function data( $action) {
 
-        return DB::table("user")->get();
+        $data = DB::table("user")->get();
+
+        return dd( $data );
 
     }
 
