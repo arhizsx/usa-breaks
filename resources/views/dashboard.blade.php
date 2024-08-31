@@ -61,7 +61,7 @@ textarea {
 
 $(document).on("keyup", ".scraper_fld", function(){
 
-    var certs= $(this).val().split(/\r?\n/);
+    var certs= $(document).find("[name='items']").val().split(/\r?\n/);
 
     if( certs.length > 0 ){
 
