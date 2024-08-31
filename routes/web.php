@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\DataController;
 
 Route::group(['middleware' => ['auth', 'verified']], function () {
 
@@ -15,5 +16,11 @@ Route::group(['middleware' => ['auth', 'verified']], function () {
     Route::get('/scraped', function () {
         return view('scraped');
     })->name('scraped');
+
+    Route::get('/data/{what}', function () {
+        return view('scraped');
+    })->name('scraped');
+
+    Route::get('/data/{action}',  [DataController::class, 'data']);
 
 });
