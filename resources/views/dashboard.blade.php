@@ -23,15 +23,15 @@ textarea {
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
                 <div class="container-fluid p-4">
-                    <div class="row mb-3">
+                    <div class="row">
                         <div class="col-6">
                             <label for="certificate_numbers" class="form-label">Certificate Numbers</label>
-                            <textarea class="form-control" name="certificate_numbers" id="certificate_numbers"></textarea>
+                            <textarea class="form-control mb-3" name="certificate_numbers" id="certificate_numbers"></textarea>
                         </div>
                         <div class="col-6">
                             <label for="filename" class="form-label">Filename</label>
-                            <input type="text" class="form-control" name="filename" id="filename">
-                            <button class="btn btn-lg w-100 bg-primary text-white">Scrape</button>
+                            <input type="text" class="form-control mb-3" name="filename" id="filename">
+                            <button class="btn btn-lg w-100 bg-primary text-white mb-3">Scrape</button>
                         </div>
                     </div>
                 </div>
