@@ -60,12 +60,10 @@ textarea {
 
 
 $(document).find("[name='filename']").keyup(function(e){
-    console.log(e);
     getIt();
 });
 
 $(document).find("[name='certificate_numbers']").keyup(function(e){
-    console.log(e);
     getIt();
 });
 
