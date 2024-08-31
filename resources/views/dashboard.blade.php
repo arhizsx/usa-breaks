@@ -58,7 +58,7 @@ textarea {
                     </div>
                     <div id="loading" class="d-none">
                         <div class="row">
-                            <div class="col-12">
+                            <div class="col-12 text-center p-5">
                                 <i class="fa-solid fa-spinner fa-spin-pulse fa-spin-reverse fa-5x"></i>
                             </div>
                         </div>
