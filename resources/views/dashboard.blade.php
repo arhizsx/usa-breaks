@@ -63,6 +63,8 @@ $(document).on("keyup", "#certificate_numbers", function(){
 
     var certs= $(this).val().split(/\r?\n/);
 
+    console.log($(document).find("[name-='filename']").val().length);
+
     if( certs.length > 0 && $(document).find("[name-='filename']").val().length > 4 ){
 
         $(document).find("[name='items']").val( certs.length );
