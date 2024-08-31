@@ -59,7 +59,9 @@ textarea {
 <script>
 
 
-$(document).on("keyup blur change", ".scraper_fld", function(){
+$(document).on("keyup blur change", ".scraper_fld", function(e){
+
+    console.log(e);
 
     $(this).trigger("change");
 
