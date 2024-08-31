@@ -32,7 +32,7 @@
             <div class="modal-body">
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-secondary goScraper" data-bs-dismiss="modal">Close</button>
             </div>
         </div>
     </div>
@@ -53,4 +53,8 @@
 
     });
 
-    </script>
+    $(document).on("click", ".goScraper", function(){
+        console.log("go");
+    });
+
+</script>
