@@ -73,6 +73,8 @@ function getIt(){
 
     var certs= $(document).find("[name='certificate_numbers']").val().split(/\r?\n/);
 
+    console.log(certs);
+
     if( certs.length >= 1 ){
 
         $(document).find("[name='items']").val( certs.length );
