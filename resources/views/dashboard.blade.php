@@ -35,6 +35,10 @@ textarea {
                                     <label for="credits" class="form-label">Scrape Credits</label>
                                     <input type="text" disabled class="form-control mb-3" name="credits" id="credits" value="UNLIMITED">
                                 </div>
+                                <div class="flex-fill">
+                                    <label for="priority" class="form-label">Priority</label>
+                                    <input type="text" disabled class="form-control mb-3" name="priority" id="priority" value="VIP">
+                                </div>
                             </div>
                             <label for="filename" class="form-label">Filename</label>
                             <input type="text" class="form-control mb-3" name="filename" id="filename">
