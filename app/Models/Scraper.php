@@ -9,8 +9,6 @@ class Scraper extends Model
 {
     use HasFactory;
 
-    protected $table = 'scrapes';
-
     protected $fillable = [
         'id',
         'user_id',
