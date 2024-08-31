@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Models\Scraper;
+use App\Models\Orders;
+use Illuminate\Support\Facades\Auth;
 
 class DataController extends Controller
 {
@@ -14,17 +16,23 @@ class DataController extends Controller
 
             case "orders":
 
-                $data = Scraper::where("status", "SCHEDULED")->get();
+                $data = Orders::where("user_id", Auth::user()->id )
+                            ->orderBy("id", "desc")
+                            ->get();
                 break;
 
             case "scheduled":
 
-                $data = Scraper::where("status", "SCHEDULED")->get();
+                $data = Scraper::where("status", "SCHEDULED")
+                            ->where("user_id", Auth::user()->id )
+                            ->get();
                 break;
 
             case "scraped":
 
-                $data = Scraper::where("status", "PROCESSED")->get();
+                $data = Scraper::where("status", "PROCESSED")
+                            ->where("user_id", Auth::user()->id )
+                            ->get();
                 break;
 
             default:
