@@ -29,7 +29,7 @@ textarea {
                             <div class="d-flex">
                                 <div class="flex-fill">
                                     <label for="items" class="form-label">Items</label>
-                                    <input type="number" disabled class="form-control mb-3" name="items" id="items">
+                                    <input type="number" disabled class="form-control mb-3" name="items" id="items" value="0">
                                 </div>
                                 <div class="flex-fill">
                                     <label for="credits" class="form-label">Scrape Credits</label>
