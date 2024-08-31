@@ -44,7 +44,7 @@
     let x= "";
     let modal = "#installation_details";
     let datagrid = "#gridContainer";
-    let datasource = '/data/scheduled';
+    let datasource = '/data/scraped';
     let columns = ['Order No', 'certificate_number', 'data', 'front', 'back', 'status', 'created_at', 'updated_at'];
 
     $(() => {
