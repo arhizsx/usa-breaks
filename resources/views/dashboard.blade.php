@@ -67,7 +67,7 @@ function expandTextarea(id) {
 
 }
 
-expandTextarea('certificate_numbers');
+// expandTextarea('certificate_numbers');
 
 $(document).on("keyup", "#certificate_numbers", function(){
 
