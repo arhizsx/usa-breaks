@@ -149,6 +149,8 @@ $(document).on("click", "#scrape_btn", function(e){
         $(document).find("#scrape_form_box").removeClass("d-none");
         $(document).find("#loading").addClass("d-none");
 
+        $("#gridContainer").dxDataGrid("instance").refresh();
+
 
     });
 
