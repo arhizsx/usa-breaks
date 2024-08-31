@@ -24,35 +24,40 @@ textarea {
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
                 <div class="container-fluid p-4">
-                    <div class="row">
-                        <div class="col-xl-6 mb-3">
-                            <div class="d-flex">
-                                <div class="flex-fill">
-                                    <label for="items" class="form-label">Items</label>
-                                    <input type="number" disabled class="form-control mb-3" name="items" id="items" value="0">
+                    <div id="scrape_form">
+                        <div class="row">
+                            <div class="col-xl-6 mb-3">
+                                <div class="d-flex">
+                                    <div class="flex-fill">
+                                        <label for="items" class="form-label">Items</label>
+                                        <input type="number" disabled class="form-control mb-3" name="items" id="items" value="0">
+                                    </div>
+                                    <div class="flex-fill">
+                                        <label for="credits" class="form-label">Credits</label>
+                                        <input type="text" disabled class="form-control mb-3" name="credits" id="credits" value="UNLIMITED">
+                                    </div>
+                                    <div class="flex-fill">
+                                        <label for="priority" class="form-label">Priority</label>
+                                        <input type="text" disabled class="form-control mb-3" name="priority" id="priority" value="VIP">
+                                    </div>
                                 </div>
-                                <div class="flex-fill">
-                                    <label for="credits" class="form-label">Credits</label>
-                                    <input type="text" disabled class="form-control mb-3" name="credits" id="credits" value="UNLIMITED">
-                                </div>
-                                <div class="flex-fill">
-                                    <label for="priority" class="form-label">Priority</label>
-                                    <input type="text" disabled class="form-control mb-3" name="priority" id="priority" value="VIP">
-                                </div>
+                                <label for="filename" class="form-label">Filename</label>
+                                <input type="text" class="form-control mb-3" name="filename" id="filename">
                             </div>
-                            <label for="filename" class="form-label">Filename</label>
-                            <input type="text" class="form-control mb-3" name="filename" id="filename">
-                        </div>
 
-                        <div class="col-xl-6 mb-3">
-                            <label for="certificate_numbers" class="form-label">Certificate Numbers</label>
-                            <textarea class="form-control mb-3 scraper_fld" name="certificate_numbers" id="certificate_numbers"></textarea>
+                            <div class="col-xl-6 mb-3">
+                                <label for="certificate_numbers" class="form-label">Certificate Numbers</label>
+                                <textarea class="form-control mb-3 scraper_fld" name="certificate_numbers" id="certificate_numbers"></textarea>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xl-12">
+                                <button disabled id="scrape_btn" class="btn btn-lg w-100 bg-primary text-white scraper_fld">Get Info</button>
+                            </div>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-xl-12">
-                            <button disabled id="scrape_btn" class="btn btn-lg w-100 bg-primary text-white scraper_fld">Get Info</button>
-                        </div>
+                    <div id="loading">
+                        <i class="fa-solid fa-spinner fa-spin-pulse fa-spin-reverse fa-5x"></i>
                     </div>
                 </div>
             </div>
@@ -104,8 +109,9 @@ function getIt(){
 }
 
 $(document).on("click", "#scrape_btn", function(){
-    console.log("go");
 });
+
+
 
 
 </script>
