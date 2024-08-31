@@ -25,11 +25,11 @@ textarea {
             <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
                 <div class="container-fluid p-4">
                     <div class="row">
-                        <div class="col-6">
+                        <div class="col-xl-6">
                             <label for="certificate_numbers" class="form-label">Certificate Numbers</label>
                             <textarea class="form-control mb-3" name="certificate_numbers" id="certificate_numbers"></textarea>
                         </div>
-                        <div class="col-6">
+                        <div class="col-xl-6">
                             <div class="d-flex">
                                 <div class="flex-fill">
                                     <label for="items" class="form-label">Items to Scrape</label>
