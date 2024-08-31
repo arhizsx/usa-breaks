@@ -83,7 +83,7 @@ function getIt(){
 
     }
 
-    if( certs.length > 0 && $(document).find("[name='filename']").val() ){
+    if( certs.length > 0 && $(document).find("[name='filename']").val().length > 4 ){
 
         $(document).find("#scrape_btn").prop("disabled", false);
 
