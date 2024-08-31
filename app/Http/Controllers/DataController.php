@@ -82,6 +82,19 @@ class DataController extends Controller
         $order->save();
 
 
+        if( $order ){
+
+            foreach( $certificates as $certificate ){
+
+                $scrape = new Scraper;
+
+                $scrape->user_id = Auth::user()->id;
+                $scrape->certificate_number = $certificate;
+                $scrape->status = "QUEUED";
+
+            }
+
+        }
 
         return ["error" => false, "filename" => $request->filename, "certificates" => $certificates, "user_id" => $request->user_id, "order" => $order];
 
