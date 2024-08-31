@@ -26,10 +26,6 @@ textarea {
                 <div class="container-fluid p-4">
                     <div class="row">
                         <div class="col-xl-6 mb-3">
-                            <label for="certificate_numbers" class="form-label">Certificate Numbers</label>
-                            <textarea class="form-control mb-3" name="certificate_numbers" id="certificate_numbers"></textarea>
-                        </div>
-                        <div class="col-xl-6">
                             <div class="d-flex">
                                 <div class="flex-fill">
                                     <label for="items" class="form-label">Items to Scrape</label>
@@ -43,6 +39,11 @@ textarea {
                             <label for="filename" class="form-label">Filename</label>
                             <input type="text" class="form-control mb-3" name="filename" id="filename">
                             <button class="btn btn-lg w-100 bg-primary text-white mb-3">Scrape</button>
+                        </div>
+
+                        <div class="col-xl-6 mb-3">
+                            <label for="certificate_numbers" class="form-label">Certificate Numbers</label>
+                            <textarea class="form-control mb-3" name="certificate_numbers" id="certificate_numbers"></textarea>
                         </div>
                     </div>
                 </div>
