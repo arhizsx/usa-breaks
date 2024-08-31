@@ -59,7 +59,7 @@ textarea {
 <script>
 
 
-$(document).on("keyup blur", ".scraper_fld", function(e){
+$(document).find(".scraper_fld").keypress(function(){
 
     console.log(e);
 
@@ -84,6 +84,12 @@ $(document).on("keyup blur", ".scraper_fld", function(e){
         $(document).find("#scrape_btn").prop("disabled", true);
 
     }
+
+
+});
+
+$(document).on("keyup blur", ".scraper_fld", function(e){
+
 
 });
 
