@@ -56,7 +56,7 @@ textarea {
                             </div>
                         </div>
                     </div>
-                    <div id="loading">
+                    <div id="loading" class="d-none">
                         <i class="fa-solid fa-spinner fa-spin-pulse fa-spin-reverse fa-5x"></i>
                     </div>
                 </div>
@@ -109,6 +109,10 @@ function getIt(){
 }
 
 $(document).on("click", "#scrape_btn", function(){
+
+    $(document).find("#scrape_form").addClass("d-none");
+    $(document).find("#loading").removeClass("d-none");
+
 });
 
 
