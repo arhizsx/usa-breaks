@@ -88,8 +88,8 @@
                 if (options.data.data != null)  {
 
                     $('<div>').append(`${options.data.Year} `)
-                            .append(`${options.data.Year} `)
                             .append(`${options.data.Brand} `)
+                            .append(`${options.data.Player} `)
                             .appendTo(container);
                 }
             },
