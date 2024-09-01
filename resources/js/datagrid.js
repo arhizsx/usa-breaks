@@ -10,7 +10,7 @@ $.fn.setDatagrid = function( modal, datasource, columns, callback=false){
             mode: 'single',
         },
         showBorders: true,
-        columnHidingEnabled: true,
+        columnHidingEnabled: fakse,
         columnAutoWidth: false,
         export: {
             enabled: true,
@@ -30,7 +30,7 @@ $.fn.setDatagrid = function( modal, datasource, columns, callback=false){
             allowSearch: true,
         },
         scrolling: {
-            rowRenderingMode: 'virtual',
+            rowRenderingMode: 'standard',
         },
         paging: {
             pageSize: 50,
