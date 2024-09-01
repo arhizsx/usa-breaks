@@ -60,9 +60,11 @@
             caption: 'Front',
             width: 120,
             cellTemplate(container, options) {
-                $('<div>')
-                .append($('<img>', { src: options.value, alt: `Front of ${options.data.certificate_number}` }))
-                .appendTo(container);
+                if (options.value != null)  {
+                    $('<div>')
+                    .append($('<img>', { src: options.value, alt: `Front of ${options.data.certificate_number}` }))
+                    .appendTo(container);
+                }
             },
 
         },
@@ -71,9 +73,11 @@
             caption: 'Back',
             width: 120,
             cellTemplate(container, options) {
-                $('<div>')
-                .append($('<img>', { src: options.value, alt: `Back of ${options.data.certificate_number}` }))
-                .appendTo(container);
+                if (options.value != null)  {
+                    $('<div>')
+                    .append($('<img>', { src: options.value, alt: `Front of ${options.data.certificate_number}` }))
+                    .appendTo(container);
+                }
             },
         },
         {
