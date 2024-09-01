@@ -87,7 +87,7 @@
             cellTemplate(container, options) {
                 if (options.data.data != null)  {
 
-                    var row = $('<div>', { class=`row` });
+                    var row = $('<div>', { class: `row` });
 
                     var first_col = $('<div>', { class: `col-4` } );
                     first_col.append('<label>').append(`Year`);
