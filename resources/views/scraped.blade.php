@@ -70,6 +70,11 @@
             dataField: 'certImgBack',
             caption: 'Back',
             width: 120,
+            cellTemplate(container, options) {
+                $('<div>')
+                .append($('<img>', { src: options.value, alt: `Back of ${options.data.certificate_number}` }))
+                .appendTo(container);
+            },
         },
         {
             dataField: 'status',
