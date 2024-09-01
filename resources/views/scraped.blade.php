@@ -87,18 +87,10 @@
             cellTemplate(container, options) {
                 if (options.data.data != null)  {
 
-                    var row = $('<div>', { class: `row` });
-
-                    var first_col = $('<div>', { class: `col-4` } );
-                    first_col.append('<label>').append(`Year`);
-
-                    var second_col = $('<div>', { class: `col-8` } );
-                        second_col.append($('<input>', { class: `form-control forn-control-sm` , type: `text`, value:  `${options.data.Year}` }));
-
-                    row.append(first_col);
-                    row.append(second_col);
-
-                    row.appendTo(container);
+                    $('<div>').append(`${options.data.Year} `)
+                            .append(`${options.data.Year} `)
+                            .append(`${options.data."Brand"} `)
+                            .appendTo(container);
                 }
             },
         }
