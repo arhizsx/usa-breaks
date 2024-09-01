@@ -10,7 +10,7 @@ $.fn.setDatagrid = function( modal, datasource, columns, callback=false){
             mode: 'single',
         },
         showBorders: true,
-        columnHidingEnabled: false,
+        columnHidingEnabled: true,
         columnAutoWidth: true,
         export: {
             enabled: true,
