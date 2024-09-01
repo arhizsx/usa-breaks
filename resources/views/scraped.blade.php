@@ -89,7 +89,7 @@
 
                     $('<div>').append(`${options.data.Year} `)
                             .append(`${options.data.Year} `)
-                            .append(`${options.data."Brand"} `)
+                            .append(`${options.data.Brand} `)
                             .appendTo(container);
                 }
             },
