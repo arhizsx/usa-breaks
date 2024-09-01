@@ -98,7 +98,8 @@
             },
         },
         {
-            dataField: 'created_at',
+            dataField: 'updated_at',
+            caption: 'Added At'
         }
     ];
 
