@@ -52,6 +52,7 @@
         },
         {
             dataField: 'certificate_number',
+            caption: 'Certificate #'
         },
         {
             dataField: 'certImgFront',
