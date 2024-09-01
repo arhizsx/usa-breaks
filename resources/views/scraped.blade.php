@@ -45,7 +45,22 @@
     let modal = "#installation_details";
     let datagrid = "#gridContainer";
     let datasource = '/data/scraped';
-    let columns = ['order_id', 'certificate_number', 'certImgFront', 'certImgBack', 'status', 'created_at', 'updated_at'];
+    let columns = [
+        {
+            dataField: 'order_id',
+            caption 'Order #'
+        },
+        {
+            dataField: 'certificate_number',
+            caption 'Certificate #'
+        }
+        {
+            dataField: 'certImgFront',
+            caption 'certImgFront'
+        },
+
+        'certImgBack', 'status', 'created_at', 'updated_at'
+    ];
 
     $(() => {
 
