@@ -22,11 +22,11 @@
     </div>
 </x-app-layout>
 
-<div class="modal fade" id="installation_details" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+<div class="modal fade" id="dxmodal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg modal-fullscreen-lg-down">
         <div class="modal-content">
             <div class="modal-header bg-primary text-white">
-                <h1 class="modal-title fs-5" id="staticBackdropLabel">Installation Details</h1>
+                <h1 class="modal-title fs-5" id="staticBackdropLabel">Card Details</h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
@@ -42,7 +42,7 @@
 <script>
 
     let x= "";
-    let modal = "#installation_details";
+    let modal = "#dxmodal";
     let datagrid = "#gridContainer";
     let datasource = '/data/queued';
     let columns = ['order_id', 'certificate_number', 'status', 'created_at', 'updated_at'];
