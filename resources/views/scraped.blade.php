@@ -51,7 +51,7 @@
         },
         {
             dataField: 'certificate_number',
-        }
+        },
         {
             dataField: 'certImgFront',
         },
