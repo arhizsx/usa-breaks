@@ -82,11 +82,11 @@
             },
         },
         {
-            dataField: data,
+            dataField: null,
             caption: 'Card',
             width: 100,
             cellTemplate(container, options) {
-                if (options.value != null)  {
+                if (options.data.data != null)  {
                     $('<div>')
                         .append($('<input>', { type: `text`, value:  `${options.data.Year}` }))
                     .appendTo(container);
