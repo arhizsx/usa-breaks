@@ -42,7 +42,7 @@ class DataController extends Controller
             case "scraped":
 
                 $data = DB::table("view_scraper")
-                            ->whereIn("status", array("PROCESSED", "ERROR"))
+                            ->whereIn("status", array("PROCESSED"))
                             ->where("user_id", Auth::user()->id )
                             ->get();
                 break;
