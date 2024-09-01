@@ -99,9 +99,7 @@
         },
         {
             dataField: 'created_at',
-            caption: 'Added',
-        },
-
+        }
     ];
 
     $(() => {
