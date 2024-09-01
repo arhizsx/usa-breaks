@@ -32,7 +32,7 @@ class DataController extends Controller
 
             case "queued":
 
-                $data = Scraper::where("status", "QUEUED")
+                $data = Scraper::whereIn("status", array("QUEUED","RUNNING"))
                             ->where("user_id", Auth::user()->id )
                             ->get();
                 break;
