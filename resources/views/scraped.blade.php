@@ -48,18 +48,25 @@
     let columns = [
         {
             dataField: 'order_id',
-            caption 'Order #'
         },
         {
             dataField: 'certificate_number',
-            caption 'Certificate #'
         }
         {
             dataField: 'certImgFront',
-            caption 'certImgFront'
         },
-
-        'certImgBack', 'status', 'created_at', 'updated_at'
+        {
+            dataField: 'certImgBack',
+        },
+        {
+            dataField: 'status',
+        },
+        {
+            dataField: 'created_at',
+        },
+        {
+            dataField: 'updated_at',
+        }
     ];
 
     $(() => {
