@@ -30,7 +30,7 @@ class DataController extends Controller
                             ->get();
                 break;
 
-            case "scheduled":
+            case "queued":
 
                 $data = Scraper::where("status", "QUEUED")
                             ->where("user_id", Auth::user()->id )
@@ -58,8 +58,10 @@ class DataController extends Controller
 
         switch( $request->action ){
             case "post_items";
+
                 return $this->postItems($request);
                 break;
+
             default:
                 return ["error"=> true, "message" => "Action not configured"];
         }

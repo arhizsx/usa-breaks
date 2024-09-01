@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Scheduled') }}
+            {{ __('Queued') }}
         </h2>
     </x-slot>
 
@@ -44,7 +44,7 @@
     let x= "";
     let modal = "#installation_details";
     let datagrid = "#gridContainer";
-    let datasource = '/data/scheduled';
+    let datasource = '/data/queued';
     let columns = ['order_id', 'certificate_number', 'status', 'created_at', 'updated_at'];
 
     $(() => {

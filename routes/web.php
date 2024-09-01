@@ -9,9 +9,9 @@ Route::group(['middleware' => ['auth', 'verified']], function () {
         return view('dashboard');
     })->name('dashboard');
 
-    Route::get('/scheduled', function () {
-        return view('scheduled');
-    })->name('scheduled');
+    Route::get('/queued', function () {
+        return view('queued');
+    })->name('queued');
 
     Route::get('/processed', function () {
         return view('scraped');
