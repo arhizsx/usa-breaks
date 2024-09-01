@@ -53,7 +53,7 @@
         },
         {
             dataField: 'certificate_number',
-            caption: 'Certificate #'
+            caption: 'Certificate #',
             width: 120,
         },
         {
