@@ -41,7 +41,7 @@ class DataController extends Controller
 
             case "scraped":
 
-                $data = Scraper::where("status", "PROCESSED")
+                $data = Scraper::whereIn("status", array("PROCESSED", "ERROR"))
                             ->where("user_id", Auth::user()->id )
                             ->get();
                 break;
