@@ -86,9 +86,19 @@
             caption: 'Card',
             cellTemplate(container, options) {
                 if (options.data.data != null)  {
-                    $('<div>')
-                        .append($('<input>', { class: `form-control forn-control-sm` , type: `text`, value:  `${options.data.Year}` }))
-                    .appendTo(container);
+
+                    var row = $('<div>', { class=`row` });
+
+                    var first_col = $('<div>', { class='col-4' } );
+                    first_col.append('<label>').append(`Year`);
+
+                    var second_col = $('<div>', { class='col-8' } );
+                    second.append($('<input>', { class: `form-control forn-control-sm` , type: `text`, value:  `${options.data.Year}` }));
+
+                    row.append(first);
+                    row.append(second);
+
+                    row.appendTo(container);
                 }
             },
         }
