@@ -84,7 +84,6 @@
         {
             dataField: null,
             caption: 'Card',
-            width: 100,
             cellTemplate(container, options) {
                 if (options.data.data != null)  {
                     $('<div>')
