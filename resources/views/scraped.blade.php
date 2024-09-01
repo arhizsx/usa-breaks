@@ -88,16 +88,10 @@
             cellTemplate(container, options) {
                 if (options.data.data != null)  {
                     $('<div>')
-                        .append($('<input>', { class: `form-control` , type: `text`, value:  `${options.data.Year}` }))
+                        .append($('<input>', { class: `form-control forn-control-sm` , type: `text`, value:  `${options.data.Year}` }))
                     .appendTo(container);
                 }
             },
-        },
-        {
-            dataField: 'created_at',
-        },
-        {
-            dataField: 'updated_at',
         }
     ];
 
