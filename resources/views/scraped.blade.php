@@ -90,6 +90,7 @@
                     $('<div>').append(`${options.data.Year} `)
                             .append(`${options.data.Brand} `)
                             .append(`${options.data.Player} `)
+                            .append(`${options.data['Card Number']} `)
                             .appendTo(container);
                 }
             },
