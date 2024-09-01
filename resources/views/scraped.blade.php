@@ -82,9 +82,6 @@
             },
         },
         {
-            dataField: 'status',
-        },
-        {
             dataField: 'created_at',
         },
         {
