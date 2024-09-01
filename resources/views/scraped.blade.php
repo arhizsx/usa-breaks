@@ -56,12 +56,12 @@
         },
         {
             dataField: 'certImgFront',
-            caption: 'Front'
+            caption: 'Front',
             width: 100,
         },
         {
             dataField: 'certImgBack',
-            caption: 'Back'
+            caption: 'Back',
             width: 100,
         },
         {
