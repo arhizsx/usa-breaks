@@ -88,7 +88,7 @@
             cellTemplate(container, options) {
                 if (options.data.data != null)  {
                     $('<div>')
-                        .append($('<input>', { type: `text`, value:  `${options.data.Year}` }))
+                        .append($('<input>', { class: `form-control` , type: `text`, value:  `${options.data.Year}` }))
                     .appendTo(container);
                 }
             },
