@@ -96,7 +96,7 @@
                             .appendTo(container);
                 }
             },
-        }
+        },
         {
             dataField: 'created_at',
             caption: 'Added',
