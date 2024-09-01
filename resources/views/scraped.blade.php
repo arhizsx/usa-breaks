@@ -93,10 +93,10 @@
                     first_col.append('<label>').append(`Year`);
 
                     var second_col = $('<div>', { class: `col-8` } );
-                    second.append($('<input>', { class: `form-control forn-control-sm` , type: `text`, value:  `${options.data.Year}` }));
+                        second_col.append($('<input>', { class: `form-control forn-control-sm` , type: `text`, value:  `${options.data.Year}` }));
 
-                    row.append(first);
-                    row.append(second);
+                    row.append(first_col);
+                    row.append(second_col);
 
                     row.appendTo(container);
                 }
