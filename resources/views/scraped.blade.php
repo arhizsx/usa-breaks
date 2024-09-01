@@ -57,6 +57,22 @@
             width: 120,
         },
         {
+            dataField: null,
+            caption: 'Card',
+            cellTemplate(container, options) {
+                if (options.data.data != null)  {
+
+                    $('<div>').append(`${options.data.Year} `)
+                            .append(`${options.data.Brand} `)
+                            .append(`${options.data.Player} `)
+                            .append(`${options.data['Card Number']} `)
+                            .append(`${options.data['Variety/Pedigree']} `)
+                            .append(`${options.data['Grade']} `)
+                            .appendTo(container);
+                }
+            },
+        },
+        {
             dataField: 'certImgFront',
             caption: 'Front',
             width: 100,
@@ -78,22 +94,6 @@
                     $('<div>')
                     .append($('<img>', { src: options.value, alt: `Front of ${options.data.certificate_number}` }))
                     .appendTo(container);
-                }
-            },
-        },
-        {
-            dataField: null,
-            caption: 'Card',
-            cellTemplate(container, options) {
-                if (options.data.data != null)  {
-
-                    $('<div>').append(`${options.data.Year} `)
-                            .append(`${options.data.Brand} `)
-                            .append(`${options.data.Player} `)
-                            .append(`${options.data['Card Number']} `)
-                            .append(`${options.data['Variety/Pedigree']} `)
-                            .append(`${options.data['Grade']} `)
-                            .appendTo(container);
                 }
             },
         },
