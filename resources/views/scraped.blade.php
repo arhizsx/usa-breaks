@@ -48,6 +48,7 @@
     let columns = [
         {
             dataField: 'order_id',
+            caption: 'Order #'
         },
         {
             dataField: 'certificate_number',
