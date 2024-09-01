@@ -49,7 +49,7 @@
         {
             dataField: 'order_id',
             caption: 'Order #',
-            width: 100,
+            width: 80,
         },
         {
             dataField: 'certificate_number',
@@ -58,7 +58,7 @@
         {
             dataField: 'certImgFront',
             caption: 'Front',
-            width: 120,
+            width: 100,
             cellTemplate(container, options) {
                 if (options.value != null)  {
                     $('<div>')
@@ -71,7 +71,7 @@
         {
             dataField: 'certImgBack',
             caption: 'Back',
-            width: 120,
+            width: 100,
             cellTemplate(container, options) {
                 if (options.value != null)  {
                     $('<div>')
