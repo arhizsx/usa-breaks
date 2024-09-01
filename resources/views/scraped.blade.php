@@ -82,6 +82,18 @@
             },
         },
         {
+            dataField: data,
+            caption: 'Card',
+            width: 100,
+            cellTemplate(container, options) {
+                if (options.value != null)  {
+                    $('<div>')
+                        .append($('<input>', { type: `text`, value:  `${options.data.Year}` }))
+                    .appendTo(container);
+                }
+            },
+        },
+        {
             dataField: 'created_at',
         },
         {
