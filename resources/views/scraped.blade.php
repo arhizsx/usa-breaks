@@ -91,6 +91,8 @@
                             .append(`${options.data.Brand} `)
                             .append(`${options.data.Player} `)
                             .append(`${options.data['Card Number']} `)
+                            .append(`${options.data['Variety/Pedigree']} `)
+                            .append(`${options.data['Grade']} `)
                             .appendTo(container);
                 }
             },
