@@ -2,7 +2,7 @@
 $order_id = $_GET['order_id'];
 $zip_filename = "images_$order_id.zip";
 
-$command = escapeshellcmd("python3 /path/to/your/script.py $order_id $zip_filename");
+$command = escapeshellcmd("python3 /home/arhizsx/download_images.py $order_id $zip_filename");
 
 // Initialize output and return variables
 $output = [];
