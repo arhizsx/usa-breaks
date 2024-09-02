@@ -41,11 +41,11 @@
 
 <script>
 
-    let x= "";
     let modal = "#dxmodal";
     let datagrid = "#gridContainer";
     let datasource = '/data/queued';
     let columns = ['order_id', 'certificate_number', 'status', 'created_at', 'updated_at'];
+    let callback = 'callbackAction';
 
     $(() => {
 

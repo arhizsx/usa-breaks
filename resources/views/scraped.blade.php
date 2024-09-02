@@ -41,7 +41,6 @@
 
 <script>
 
-    let x= "";
     let modal = "#card_details";
     let datagrid = "#gridContainer";
     let datasource = '/data/scraped';
@@ -102,12 +101,17 @@
             caption: 'Added At'
         }
     ];
+    let callback = 'callbackAction';
 
     $(() => {
 
         $(datagrid).setDatagrid( modal, datasource, columns );
 
     });
+
+    function callbackAction(data){
+        console.log( data );
+    }
 
 
 </script>

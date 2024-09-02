@@ -188,17 +188,18 @@ function postScrapes(){
 
 }
 
-    let x= "";
-    let modal = "#installation_details";
-    let datagrid = "#gridContainer";
-    let datasource = '/data/orders_active';
-    let columns = ['id', 'filename', 'certificates', 'status', 'created_at', 'updated_at'];
+let modal = "#installation_details";
+let datagrid = "#gridContainer";
+let datasource = '/data/orders_active';
+let columns = ['id', 'filename', 'certificates', 'status', 'created_at', 'updated_at'];
+let callback = 'callbackAction';
 
-    $(() => {
 
-        $(datagrid).setDatagrid( modal, datasource, columns );
+$(() => {
 
-    });
+    $(datagrid).setDatagrid( modal, datasource, columns );
+
+});
 
 
 </script>
