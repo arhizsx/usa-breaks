@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DataController;
+use App\Http\Controllers\DownloadController;
 
 Route::group(['middleware' => ['auth', 'verified']], function () {
 
@@ -26,5 +27,7 @@ Route::group(['middleware' => ['auth', 'verified']], function () {
     Route::get('/data/{action}',  [DataController::class, 'data']);
 
     Route::post('/data/post',  [DataController::class, 'data_post']);
+
+    Route::get('/download/{order_id}',  [DownloadController::class, 'order']);
 
 });
