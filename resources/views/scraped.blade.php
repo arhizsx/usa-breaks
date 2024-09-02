@@ -119,7 +119,7 @@
 
     function callbackAction(data){
 
-        let info = JSON.parse(data);
+        let info = JSON.parse( JSON.stringify(data) );
 
         $(document).find(".imgFront").attr("src", info.certImgFront );
         $(document).find(".imgBack").attr("src", info.certImgBack );
