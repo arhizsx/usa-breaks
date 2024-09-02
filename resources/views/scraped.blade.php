@@ -30,6 +30,14 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
+                <div class="d-flex">
+                    <div class="imgFrontBox flex-fill">
+                        <img class="imgFront" src="">
+                    </div>
+                    <div class="imgBackBox flex-fill">
+                        <img class="imgBack" src="">
+                    </div>
+                </div>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -105,7 +113,7 @@
 
     $(() => {
 
-        $(datagrid).setDatagrid( modal, datasource, columns );
+        $(datagrid).setDatagrid( modal, datasource, columns, callback );
 
     });
 
