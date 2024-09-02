@@ -1,22 +1,32 @@
 <?php
 $order_id = $_GET['order_id'];
-$zip_filename = "testing.zip";
+$zip_filename = "images_$order_id.zip";
 
-$command = escapeshellcmd("python3 /home/arhizsx/download_images.py $order_id $zip_filename");
-$output = shell_exec($command);
+$command = escapeshellcmd("python3 /path/to/your/script.py $order_id $zip_filename");
 
-$output = "/var/www/scraper/public/files/" . $zip_filename;
+// Initialize output and return variables
+$output = [];
+$return_var = 0;
 
-if (file_exists(trim($output))) {
-    header('Content-Type: application/zip');
-    header('Content-Disposition: attachment; filename="' . basename($output) . '"');
-    header('Content-Length: ' . filesize($output));
+// Execute the command
+exec($command, $output, $return_var);
 
-    flush();
-    readfile($output);
-    unlink($output);  // Optionally, delete the file after download
-    exit;
+if ($return_var === 0) {
+    $zip_file_path = trim(implode("\n", $output));
+
+    if (file_exists($zip_file_path)) {
+        header('Content-Type: application/zip');
+        header('Content-Disposition: attachment; filename="' . basename($zip_file_path) . '"');
+        header('Content-Length: ' . filesize($zip_file_path));
+
+        flush();
+        readfile($zip_file_path);
+        unlink($zip_file_path);  // Optionally, delete the file after download
+        exit;
+    } else {
+        echo "Failed to create ZIP file.";
+    }
 } else {
-    echo "Failed to create ZIP file.";
+    echo "Failed to execute command.";
 }
 ?>
