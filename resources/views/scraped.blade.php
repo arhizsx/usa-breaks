@@ -32,10 +32,10 @@
             <div class="modal-body">
                 <div class="d-flex">
                     <div class="imgFrontBox flex-fill">
-                        <img class="imgFront" src="">
+                        <img class="imgFront" width="100%" src="">
                     </div>
                     <div class="imgBackBox flex-fill">
-                        <img class="imgBack" src="">
+                        <img class="imgBack" width="100%" src="">
                     </div>
                 </div>
             </div>
