@@ -118,6 +118,12 @@
     });
 
     function callbackAction(data){
+
+        let data = JSON.parse(data);
+
+        $(document).find(".imgFront").attr("src", data.certImgFront );
+        $(document).find(".imgBack").attr("src", data.certImgBack );
+
         console.log( data );
     }
 
