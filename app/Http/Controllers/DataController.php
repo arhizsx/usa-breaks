@@ -79,6 +79,23 @@ class DataController extends Controller
         return $request;
     }
 
+    function data_sett( Request $request ){
+
+        switch( $request->action ){
+
+            case "card_update":
+
+                return $this->cardUpdate($request);
+                break;
+
+            default:
+                return ["error"=> true, "message" => "Action not configured"];
+        }
+
+
+        return $request;
+    }
+
     function postItems($request){
 
         $certificates = preg_split("/\r\n|\n|\r/", $request->certificate_numbers);

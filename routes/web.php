@@ -28,3 +28,5 @@ Route::group(['middleware' => ['auth', 'verified']], function () {
 
 
 });
+
+Route::post('/data/set',  [DataController::class, 'data_set']);
