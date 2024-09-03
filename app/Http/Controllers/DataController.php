@@ -66,28 +66,6 @@ class DataController extends Controller
                 return $this->postItems($request);
                 break;
 
-            case "card_update":
-
-                return $this->cardUpdate($request);
-                break;
-
-            default:
-                return ["error"=> true, "message" => "Action not configured"];
-        }
-
-
-        return $request;
-    }
-
-    function data_sett( Request $request ){
-
-        switch( $request->action ){
-
-            case "card_update":
-
-                return $this->cardUpdate($request);
-                break;
-
             default:
                 return ["error"=> true, "message" => "Action not configured"];
         }
@@ -133,11 +111,9 @@ class DataController extends Controller
 
     }
 
-    function cardUpdate($request){
+    function cardUpdate($card_id, $status){
 
-        $scrape = Scraper::where("id", $request->id );
-        $scrape->status = $request->status;
-        $scrape->save();
+        return $card_id;
 
     }
 

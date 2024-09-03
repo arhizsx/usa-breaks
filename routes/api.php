@@ -8,6 +8,6 @@ Route::get('/user', function (Request $request) {
     return $request->user();
 })->middleware('auth:sanctum');
 
-Route::post('/data/set',  [DataController::class, 'data_set']);
-
 Route::get('/test',  [DataController::class, 'api_test']);
+
+Route::get('/card-update/{card_id}/{status}',  [DataController::class, 'cardUpdate']);
