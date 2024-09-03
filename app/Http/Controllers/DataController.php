@@ -139,6 +139,10 @@ class DataController extends Controller
         $scrape->status = $request->status;
         $scrape->save();
 
+    }
+
+    function api_test(){
+        return "test";
 
     }
 }

@@ -9,3 +9,5 @@ Route::get('/user', function (Request $request) {
 })->middleware('auth:sanctum');
 
 Route::post('/data/set',  [DataController::class, 'data_set']);
+
+Route::get('/test',  [DataController::class, 'api_test']);
