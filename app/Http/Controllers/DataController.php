@@ -60,9 +60,15 @@ class DataController extends Controller
     function data_post( Request $request ){
 
         switch( $request->action ){
-            case "post_items";
+
+            case "post_items":
 
                 return $this->postItems($request);
+                break;
+
+            case "card_update":
+
+                return $this->cardUpdate($request);
                 break;
 
             default:
@@ -110,4 +116,12 @@ class DataController extends Controller
 
     }
 
+    function cardUpdate($request){
+
+        $scrape = Scraper::where("id", $request->id );
+        $scrape->status = $request->status;
+        $scrape->save();
+
+
+    }
 }
