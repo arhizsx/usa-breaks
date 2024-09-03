@@ -1,7 +1,7 @@
 <?php
 $order_id = 1;  // Example order ID
 $zip_filename = "try.zip";
-$command = escapeshellcmd("python3 /home/arhizsx/download_images.py $order_id $zip_filename 2>&1");
+$command = escapeshellcmd("python3 /va/www/scraper/download_images.py $order_id $zip_filename 2>&1");
 
 $output = [];
 $return_var = 0;
