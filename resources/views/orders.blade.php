@@ -149,7 +149,7 @@
         $(document).find(".card_table").addClass("d-none");
         $(document).find(".download_link").addClass("d-none");
         $(document).find(".loading").removeClass("d-none");
-        $(document).find(".download_zip_btn").addClass("d-none");
+        // $(document).find(".download_zip_btn").addClass("d-none");
 
         $.ajax({
             type: 'get',
