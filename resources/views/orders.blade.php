@@ -52,7 +52,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary download_zip">Download</button>
+                <button type="button" class="btn btn-primary download_zip_btn">Download</button>
             </div>
         </div>
     </div>
@@ -142,7 +142,7 @@
 
     }
 
-    $(document).on("click", ".download_zip", function(){
+    $(document).on("click", ".download_zip_btn", function(){
 
         zipped = downloadZip( $(this).data("order_id") );
 
@@ -151,7 +151,7 @@
         $(document).find(".card_table").addClass("d-none");
         $(document).find(".download_link").addClass("d-none");
         $(document).find(".loading").removeClass("d-none");
-        $(document).find(".download_zip").addClass("d-none");
+        $(document).find(".download_zip_btn").addClass("d-none");
 
         $.when( zipped ).done( function( zipped ){
 
