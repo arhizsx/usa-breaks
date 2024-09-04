@@ -86,10 +86,16 @@
             $(document).find(".loading").addClass("d-none");
 
             $.each(order_cards, function(k,v){
-                console.log(v);
+                title = v["Year"] +
+                        v["Brand"] +
+                        v["Player"] +
+                        v["Card Number"] +
+                        v["Variety/Pedigree"] +
+                        v["Grade"];
+
+                console.log(title);
+
             });
-
-
         });
     }
 
