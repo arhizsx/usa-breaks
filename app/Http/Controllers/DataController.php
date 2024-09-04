@@ -60,6 +60,12 @@ class DataController extends Controller
 
     }
 
+    function download($order_id){
+
+        return view( "download", ["order_id" => $order_id] );
+
+    }
+
     function data_post( Request $request ){
 
         switch( $request->action ){

@@ -26,9 +26,7 @@ Route::group(['middleware' => ['auth', 'verified']], function () {
 
     Route::post('/data/post',  [DataController::class, 'data_post']);
 
-    Route::get('/download/{order_id}',  function(){
-        return view("download");
-    });
+    Route::get('/download/{order_id}',  [DataController::class, 'download']);
 
 
 });

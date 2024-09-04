@@ -1,7 +1,5 @@
 <?php
 
-$order_id = $_GET["order_id"];
-
 $order = DB::table("orders")->where("order_id", $order_id)->first();
 
 $zip_filename = $order->filename;
