@@ -44,10 +44,10 @@
                     </table>
                 </div>
                 <div class="download_link text-center py-5">
-                    <div>
+                    <div class="p-3">
                         <i class="fas fa-circle-down fa-beat text-primary fa-9x" style="--fa-beat-scale: 1.2;"></i>
                     </div>
-                    <div>
+                    <div class="p-3">
                         <a href="" class="download_link" class="btn btn-xl btn-primary" style="background: blue; color:white; font-size: 1.2em; padding: 10px 20px 10px 20px; border-radius: 10px;">Download File</a>
                     </div>
                 </div>
