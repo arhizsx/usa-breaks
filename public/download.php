@@ -1,7 +1,5 @@
 <?php
 
-header('Content-Type: application/json'); // Set the content type to JSON
-
 $order_id = $_GET["order_id"];
 
 $zip_filename = "trial.zip";
