@@ -122,7 +122,7 @@ class DataController extends Controller
                     ->where("status","QUEUED")
                     ->get();
 
-        if( $scrapers == 0 ){
+        if( count($scrapers) == 0 ){
 
             $order = Orders::find( $scraper->order_id );
             $order->status = "PROCESSED";
