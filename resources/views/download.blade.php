@@ -1,6 +1,6 @@
 <?php
 
-$order = DB::table("orders")->where("order_id", $order_id)->first();
+$order = DB::table("orders")->where("id", $order_id)->first();
 
 $zip_filename = $order->filename;
 
