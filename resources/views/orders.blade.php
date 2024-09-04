@@ -166,7 +166,7 @@
                 $(document).find(".download_link").removeClass("d-none");
                 $(document).find(".loading").addClass("d-none");
 
-                console.log(resp);
+                $(document).find(".download_link").attr("href", resp);
 			},
 			error: function(){
 				console.log("Error in AJAX");
