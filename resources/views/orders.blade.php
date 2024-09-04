@@ -162,7 +162,7 @@
 
 		$.ajax({
 			method: 'get',
-			url: "/download/" + $(this).data("order_id") ,
+			url: "/download/" + $(document).find(".download_zip_btn").attr("data-order_id") ,
 			success: function(resp){
 
                 $(document).find(".card_table").addClass("d-none");
