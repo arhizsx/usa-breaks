@@ -188,8 +188,6 @@
         e.preventDefault();
 
 
-        console.log( $(this).data("order_id") );
-
         var order = orderDownloaded( $(this).data("order_id"), $(this).attr("href") );
 
         $.when( order ).done( function( order ){
@@ -236,5 +234,14 @@
         return defObject.promise();
 
     }
+
+    $(document).on("hidden.bs.modal", "#installation_details", function(e){
+
+        $(document).find(".download_zip_btn").attr("data-order_id", "");
+        $(document).find(".download_link").attr("data-order_id", "");
+
+    });
+
+
 
 </script>
