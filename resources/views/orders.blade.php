@@ -31,7 +31,7 @@
             </div>
             <div class="modal-body">
                 <div class="card_table">
-                    <table>
+                    <table class="table table-sm table-bordered">
                         <thead>
                             <tr>
                                 <th>Certificate #</th>
