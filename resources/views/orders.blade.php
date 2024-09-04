@@ -96,6 +96,7 @@
             type: 'post',
             url: "/data/post",
             data: {
+                _token: "{{ csrf_token() }}",
                 action: "order_cards",
                 order_id, order_id
             },
