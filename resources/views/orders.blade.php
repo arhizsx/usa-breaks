@@ -180,7 +180,27 @@
 
     });
 
-    function downloadZip(order_id){
+
+    $(document).on("click", ".download_link", function(e){
+
+        console.log( $(this).data("order_id") );
+
+        var order = orderDownloaded( $(this).data("order_id") );
+
+        $.when( order ).done( function( order ){
+
+            if( order == true ){
+
+                $(document).find("#gridContainer").dxDataGrid("instance").refresh();
+                $(document).find("#installation_details").modal("hide");
+
+            }
+
+        });
+
+    });
+
+    function orderDownloaded(order_id) {
 
         var defObject = $.Deferred();  // create a deferred object.
 
@@ -189,15 +209,23 @@
             { 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content') }
         });
 
+        $.ajax({
+            type: 'post',
+            url: "/data/post",
+            data: {
+                action: "order_downloaded",
+                order_id, order_id
+            },
+            success: function(resp){
+                defObject.resolve(resp);    //resolve promise and pass the response.
+            },
+            error: function(){
+                console.log("Error in AJAX");
+            }
+        });
 
         return defObject.promise();
 
     }
-
-    $(document).on("click", ".download_link", function(e){
-
-        console.log( $(this).data("order_id")  );
-
-    });
 
 </script>

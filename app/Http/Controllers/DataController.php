@@ -85,6 +85,11 @@ class DataController extends Controller
                 return $data;
                 break;
 
+            case "order_downloaded":
+
+                return $this->orderDownloaded( $request->order_id );
+                break;
+
             default:
                 return ["error"=> true, "message" => "Action not configured"];
         }
@@ -151,8 +156,18 @@ class DataController extends Controller
 
     }
 
-    function api_test(){
-        return "test";
+    function orderDownloaded( $request ){
+
+        $order = Orders::find($request->order_id);
+
+        $order->status = "DOWNLOADED";
+
+        $order->save();
+
+        return true;
 
     }
+
+
+
 }
