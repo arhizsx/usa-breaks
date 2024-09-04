@@ -86,6 +86,7 @@
             $(document).find(".loading").addClass("d-none");
 
             $.each(order_cards, function(k,v){
+
                 title = v["Year"] +
                         v["Brand"] +
                         v["Player"] +
@@ -93,7 +94,9 @@
                         v["Variety/Pedigree"] +
                         v["Grade"];
 
-                console.log(title);
+                certificate_number = v["certificate_number"];
+
+                console.log(v);
 
             });
         });
