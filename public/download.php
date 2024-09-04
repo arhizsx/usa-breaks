@@ -6,8 +6,9 @@ $command = escapeshellcmd("sudo python3 /va/www/scraper/download_images.py $orde
 $output = [];
 $return_var = 0;
 
-echo passthru($command, $return_var);
+// Execute the Python script and capture output and errors
+$output = shell_exec($command);
 
-print_r($return_var);
+print_r($output);
 
 ?>
