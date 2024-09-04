@@ -184,7 +184,7 @@
     $(document).on("click", ".download_link", function(e){
 
         e.preventDefault();
-
+        // try download btn
         console.log( $(this).data("order_id") );
 
         var order = orderDownloaded( $(this).data("order_id") );
