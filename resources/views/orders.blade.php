@@ -237,7 +237,7 @@
 
     $(document).on("hidden.bs.modal", "#installation_details", function(e){
 
-        console.log($(document).find(".download_zip_btn").html());
+        console.log($(document).find(".download_zip_btn").data());
 
         $(document).find(".download_zip_btn").attr("data-order_id", "");
         $(document).find(".download_link").attr("data-order_id", "");
