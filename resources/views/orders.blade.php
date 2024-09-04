@@ -166,7 +166,7 @@
                 $(document).find(".download_link").removeClass("d-none");
                 $(document).find(".loading").addClass("d-none");
 
-                $(document).find(".download_link").attr("href", resp);
+                $(document).find(".download_link").attr("href", resp.replace("/var/www/scraper/public/", ""));
 			},
 			error: function(){
 				console.log("Error in AJAX");
