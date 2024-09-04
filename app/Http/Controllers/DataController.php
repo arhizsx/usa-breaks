@@ -87,6 +87,8 @@ class DataController extends Controller
 
             case "order_downloaded":
 
+                return $request;
+
                 return $this->orderDownloaded( $request->order_id );
                 break;
 
