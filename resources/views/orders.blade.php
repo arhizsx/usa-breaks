@@ -74,7 +74,7 @@
     function callbackAction(data){
 
         let info = JSON.parse( JSON.stringify(data) );
-        console.log( info );
+        console.log( data );
 
     }
 
