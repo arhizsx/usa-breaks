@@ -31,8 +31,6 @@ class DataController extends Controller
                             ->orderBy("id", "desc")
                             ->get();
 
-                dd($data->items);
-
                 break;
 
             case "queued":
@@ -48,6 +46,8 @@ class DataController extends Controller
                             ->whereIn("status", array("PROCESSED"))
                             ->where("user_id", Auth::user()->id )
                             ->get();
+                break;
+
                 break;
 
             default:
@@ -67,6 +67,16 @@ class DataController extends Controller
             case "post_items":
 
                 return $this->postItems($request);
+                break;
+
+            case "order_cards":
+
+                $data = DB::table("view_scraper")
+                            ->where("order_id", $request->order_id)
+                            ->where("user_id", Auth::user()->id )
+                            ->get();
+
+                return $data;
                 break;
 
             default:

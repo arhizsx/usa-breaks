@@ -49,7 +49,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Download</button>
+                <button type="button" class="btn btn-primary download_zip">Download</button>
             </div>
         </div>
     </div>
@@ -63,12 +63,21 @@
     let datagrid = "#gridContainer";
     let datasource = '/data/orders';
     let columns = ['id', 'filename', 'certificates', 'status', 'created_at', 'updated_at'];
+    let callback = 'callbackAction';
 
     $(() => {
 
         $(datagrid).setDatagrid( modal, datasource, columns );
 
     });
+
+    function callbackAction(data){
+
+        let info = JSON.parse( JSON.stringify(data) );
+        console.log( info );
+
+    }
+
 
 
 </script>
