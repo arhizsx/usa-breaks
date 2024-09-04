@@ -48,7 +48,7 @@
                         <i class="fas fa-circle-down fa-beat text-primary fa-9x" style="--fa-beat-scale: 1.2;"></i>
                     </div>
                     <div>
-                        <a href="" class="download_link" class="btn btn-xl btn-primary form-control">Download File</a>
+                        <a href="" class="download_link" class="btn btn-xl btn-primary" style="background: blue; color:white; font-size: 2em;">Download File</a>
                     </div>
                 </div>
                 <div class="loading text-center py-3">
