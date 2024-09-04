@@ -152,7 +152,7 @@
         // $(document).find(".download_zip_btn").addClass("d-none");
 
         $.ajax({
-            type: 'get',
+			method: 'get',
             url: "/download.php?order_id=" . order_id,
             success: function(resp){
                 $(document).find(".card_table").addClass("d-none");
