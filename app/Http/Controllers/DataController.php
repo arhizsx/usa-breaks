@@ -118,7 +118,7 @@ class DataController extends Controller
         $scraper->save();
 
         // UPDATE ORDER
-        $scrapers = Scraper::find($scraper->order_id);
+        $scrapers = Scraper::where("order_id",$scraper->order_id)->get();
         dd($scrapers);
 
         if( $scrapers == 0 ){
