@@ -73,7 +73,7 @@
 
     function callbackAction(data){
 
-        alert("test");
+        alert(data);
         let info = JSON.parse( JSON.stringify(data) );
         console.log( data );
 
