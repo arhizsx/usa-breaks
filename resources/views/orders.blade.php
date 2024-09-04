@@ -158,6 +158,8 @@
             $(document).find(".download_link").removeClass("d-none");
             $(document).find(".loading").addClass("d-none");
 
+            console.log(zipped);
+
         });
 
     });
