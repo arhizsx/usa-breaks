@@ -43,7 +43,7 @@
                         </tbody>
                     </table>
                 </div>
-                <div class="download_link text-center py-3">
+                <div class="download_link text-center py-5">
                     <i class="fas fa-circle-down fa-beat fa-9x" style="--fa-beat-scale: 1.5;"></i>
                 </div>
                 <div class="loading text-center py-3">
