@@ -137,5 +137,48 @@
 
     }
 
+    $(document).on("click", ".download_zip", function(){
+
+        zipped = downloadZip( $(this).data("order_id") );
+
+        $(document).find(".card_table").addClass("d-none");
+        $(document).find(".loading").removeClass("d-none");
+
+        $.when( zipped ).done( function( zipped ){
+
+            $(document).find(".card_table").removeClass("d-none");
+            $(document).find(".loading").addClass("d-none");
+
+        });
+
+    });
+
+    function downloadZip(order_id){
+
+        var defObject = $.Deferred();  // create a deferred object.
+
+        $.ajaxSetup({
+            headers:
+            { 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content') }
+        });
+
+        $.ajax({
+            type: 'post',
+            url: "/data/post",
+            data: {
+                action: "download_zip",
+                order_id, order_id
+            },
+            success: function(resp){
+                defObject.resolve(resp);    //resolve promise and pass the response.
+            },
+            error: function(){
+                console.log("Error in AJAX");
+            }
+        });
+
+        return defObject.promise();
+
+    }
 
 </script>
