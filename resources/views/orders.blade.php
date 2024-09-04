@@ -57,7 +57,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary download_zip_btn">Download</button>
+                <button type="button" class="btn btn-primary download_zip_btn" data-order_id="">Download</button>
             </div>
         </div>
     </div>
@@ -89,6 +89,7 @@
         $(document).find(".card_table").addClass("d-none");
         $(document).find(".download_link").addClass("d-none");
         $(document).find(".loading").removeClass("d-none");
+        $(document).find(".download_zip_btn").data("order_id") = info.id;
 
         $.when( order_cards ).done( function( order_cards ){
 
@@ -159,7 +160,7 @@
 
 		$.ajax({
 			method: 'get',
-			url: "download.php?order_id=1",
+			url: "/download/" + $(this).data("order_id") ,
 			success: function(resp){
 
                 $(document).find(".card_table").addClass("d-none");
