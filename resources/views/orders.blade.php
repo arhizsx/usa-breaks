@@ -57,7 +57,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary download_zip_btn" data-order_id="">Download</button>
+                <button type="button" class="d-none btn btn-primary download_zip_btn" data-order_id="">Download</button>
             </div>
         </div>
     </div>
@@ -91,6 +91,7 @@
         $(document).find(".card_table").addClass("d-none");
         $(document).find(".download_link").addClass("d-none");
         $(document).find(".loading").removeClass("d-none");
+        $(document).find(".download_zip_btn").addClass("d-none");
 
         $.when( order_cards ).done( function( order_cards ){
 
@@ -119,8 +120,11 @@
                 );
             });
 
+
             $(document).find(".download_zip_btn").attr("data-order_id", info.id);
             $(document).find(".download_link").attr("data-order_id", info.id);
+
+            $(document).find(".download_zip_btn").removeClass("d-none");
 
         });
     }
