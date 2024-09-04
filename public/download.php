@@ -1,5 +1,7 @@
 <?php
 
+header('Content-Type: application/json'); // Set the content type to JSON
+
 $order_id = $_GET["order_id"];
 
 $zip_filename = "trial.zip";
@@ -8,6 +10,6 @@ $command = "python3 /var/www/scraper/download_images.py $order_id $zip_filename 
 // Execute the Python script and capture output and errors
 $output = shell_exec($command);
 
-return $output;
+echo $output;
 
 ?>

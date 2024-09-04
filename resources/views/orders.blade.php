@@ -153,7 +153,7 @@
 
         $.ajax({
             type: 'get',
-            url: "/download.php?order_id=" . order_id,
+            url: "/download.php" . order_id,
             success: function(resp){
                 $(document).find(".card_table").addClass("d-none");
                 $(document).find(".download_link").removeClass("d-none");
