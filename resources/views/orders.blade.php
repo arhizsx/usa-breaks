@@ -89,11 +89,11 @@
 
             $.each(order_cards, function(k,v){
 
-                title = v["Year"] +
-                        v["Brand"] +
-                        v["Player"] +
-                        v["Card Number"] +
-                        v["Variety/Pedigree"] +
+                title = v["Year"] + " " +
+                        v["Brand"] + " " +
+                        v["Player"] + " " +
+                        v["Card Number"] + " " +
+                        v["Variety/Pedigree"] + " " +
                         v["Grade"];
 
                 certificate_number = v["certificate_number"];
