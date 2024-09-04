@@ -1,6 +1,6 @@
 <?php
 $order_id = 1;
-$zip_filename = "/var/www/scraper/public/files/try.zip";
+$zip_filename = "try.zip";
 $command = "sudo python3 /var/www/scraper/download_images.py $order_id $zip_filename 2>&1"; // Capture both stdout and stderr
 
 
