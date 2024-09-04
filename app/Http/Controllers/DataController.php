@@ -118,6 +118,7 @@ class DataController extends Controller
         $scraper->save();
 
         // UPDATE ORDER
+        dd($scraper);
         $scrapers = Scraper::find($scraper->order_id)
                         ->where("status","ACTIVE")
                         ->count();
