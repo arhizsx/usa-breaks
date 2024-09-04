@@ -30,6 +30,19 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
+                <div class="card_table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Certificate #</th>
+                                <th>Title</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                        </tbody>
+                    </table>
+                </div>
                 <div class="loading text-center">
                     <i class="fas fa-spinner fa-pulse fa-9x"></i>
                 </div>

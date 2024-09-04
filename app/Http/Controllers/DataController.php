@@ -30,6 +30,9 @@ class DataController extends Controller
                             ->whereNot("status", "ACTIVE")
                             ->orderBy("id", "desc")
                             ->get();
+
+                dd($data);
+
                 break;
 
             case "queued":
