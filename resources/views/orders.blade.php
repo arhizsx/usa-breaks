@@ -91,8 +91,6 @@
         $(document).find(".card_table").addClass("d-none");
         $(document).find(".download_link").addClass("d-none");
         $(document).find(".loading").removeClass("d-none");
-        $(document).find(".download_zip_btn").data("order_id", info.id);
-        $(document).find(".download_link").data("order_id", info.id);
 
         $.when( order_cards ).done( function( order_cards ){
 
@@ -120,6 +118,10 @@
                     "</tr>"
                 );
             });
+
+            $(document).find(".download_zip_btn").attr("data-order_id", info.id);
+            $(document).find(".download_link").attr("data-order_id", info.id);
+
         });
     }
 
