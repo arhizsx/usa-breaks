@@ -6,12 +6,6 @@ $command = escapeshellcmd("python3 /va/www/scraper/download_images.py $order_id 
 $output = [];
 $return_var = 0;
 
-exec($command, $output, $return_var);
+echo exec($command, $output, $return_var);
 
-if ($return_var !== 0) {
-    echo "Failed to execute command. Output: " . implode("\n", $output);
-} else {
-    // Process output if needed
-    echo "Command executed successfully.";
-}
 ?>
