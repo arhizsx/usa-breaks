@@ -96,8 +96,8 @@
             type: 'post',
             url: "/data/post",
             data: {
-                "action": "order_cards",
-                "order_id", order_id
+                action: "order_cards",
+                order_id, order_id
             },
             enctype: 'multipart/form-data',
             processData: false,
