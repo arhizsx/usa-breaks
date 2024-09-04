@@ -150,12 +150,17 @@
         $(document).find(".card_table").addClass("d-none");
         $(document).find(".download_link").addClass("d-none");
         $(document).find(".loading").removeClass("d-none");
-        // $(document).find(".download_zip_btn").addClass("d-none");
+        $(document).find(".download_zip_btn").addClass("d-none");
 
 		$.ajax({
 			method: 'get',
 			url: "download.php?order_id=1",
 			success: function(resp){
+
+                $(document).find(".card_table").addClass("d-none");
+                $(document).find(".download_link").removeClass("d-none");
+                $(document).find(".loading").addClass("d-none");
+
                 console.log(resp);
 			},
 			error: function(){
