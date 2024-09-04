@@ -154,21 +154,9 @@
 
 		$.ajax({
 			method: 'get',
-			url: "/wp-json/ebayintegration/v1/ajax?action=refreshToken",
+			url: "download.php?order_id=1",
 			success: function(resp){
-
-				var status = 'active';
-				refreshStatus( status, "btn-primary" );
-
-				var status = 'awaiting';
-				refreshStatus( status, "btn-warning" );
-
-				var status = 'sold';
-				refreshStatus( status, "btn-success" );
-
-				var status = 'unsold';
-				refreshStatus( status, "btn-danger" );
-
+                console.log(resp);
 			},
 			error: function(){
 				console.log("Error in AJAX");
