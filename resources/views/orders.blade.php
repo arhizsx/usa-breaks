@@ -30,8 +30,8 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <div class="loading">
-                    <i class="fa-solid fa-atom fa-3x"></i>
+                <div class="loading text-center">
+                    <i class="fa-solid fa-atom fa-6x"></i>
                 </div>
             </div>
             <div class="modal-footer">
