@@ -30,7 +30,7 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <div class="card_table d-none">
+                <div class="card_table">
                     <table class="table table-sm table-bordered table-striped cards_table_ajax">
                         <thead>
                             <tr>
@@ -43,7 +43,10 @@
                         </tbody>
                     </table>
                 </div>
-                <div class="loading text-center">
+                <div class="download_link text-center py-3">
+                    <i class="fas fa-circle-down fa-pulse fa-9x"></i>
+                </div>
+                <div class="loading text-center py-3">
                     <i class="fas fa-spinner fa-pulse fa-9x"></i>
                 </div>
             </div>
@@ -78,11 +81,13 @@
         order_cards = orderCards( info.id );
 
         $(document).find(".card_table").addClass("d-none");
+        $(document).find(".download_link").addClass("d-none");
         $(document).find(".loading").removeClass("d-none");
 
         $.when( order_cards ).done( function( order_cards ){
 
             $(document).find(".card_table").removeClass("d-none");
+            $(document).find(".download_link").addClass("d-none");
             $(document).find(".loading").addClass("d-none");
 
             $(document).find(".cards_table_ajax tbody").empty();
@@ -142,11 +147,13 @@
         zipped = downloadZip( $(this).data("order_id") );
 
         $(document).find(".card_table").addClass("d-none");
+        $(document).find(".download_link").addClass("d-none");
         $(document).find(".loading").removeClass("d-none");
 
         $.when( zipped ).done( function( zipped ){
 
-            $(document).find(".card_table").removeClass("d-none");
+            $(document).find(".card_table").addClass("d-none");
+            $(document).find(".download_link").removeClass("d-none");
             $(document).find(".loading").addClass("d-none");
 
         });
