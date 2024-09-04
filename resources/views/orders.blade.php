@@ -83,13 +83,15 @@
 
         let info = JSON.parse( JSON.stringify(data) );
 
+        console.log(info);
+
         order_cards = orderCards( info.id );
 
         $(document).find(".download_zip_btn").removeClass("d-none");
         $(document).find(".card_table").addClass("d-none");
         $(document).find(".download_link").addClass("d-none");
         $(document).find(".loading").removeClass("d-none");
-        $(document).find(".download_zip_btn").data("order_id", info.id);
+        $(document).find(".download_zip_btn").attr("data-order_id", info.id);
 
         $.when( order_cards ).done( function( order_cards ){
 
