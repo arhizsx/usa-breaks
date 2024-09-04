@@ -113,7 +113,20 @@ class DataController extends Controller
 
     function cardUpdate($card_id, $status){
 
-        return $card_id;
+        $scraper = Scraper::find($card_id );
+        $scraper->status = $status;
+        $scraper->save();
+
+        // UPDATE ORDER
+        $scrapers = Scraper::where("order_id", $scraper->order_id)->count();
+
+        if( $scrapers == 0 ){
+
+            $order = Orders::find( $scraper->order_id );
+            $order->status = "PROCESSED";
+            $order->save();
+
+        }
 
     }
 
