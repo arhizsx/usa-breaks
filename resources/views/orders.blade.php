@@ -31,7 +31,7 @@
             </div>
             <div class="modal-body">
                 <div class="loading text-center">
-                    <i class="fa-solid fa-atom fa-6x"></i>
+                    <i class="fa-solid fa-atom fa-10x"></i>
                 </div>
             </div>
             <div class="modal-footer">
