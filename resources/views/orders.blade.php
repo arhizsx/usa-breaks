@@ -183,6 +183,8 @@
 
     $(document).on("click", ".download_link", function(e){
 
+        e.preventDefault();
+
         console.log( $(this).data("order_id") );
 
         var order = orderDownloaded( $(this).data("order_id") );
