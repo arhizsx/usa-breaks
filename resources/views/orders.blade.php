@@ -31,7 +31,7 @@
             </div>
             <div class="modal-body">
                 <div class="card_table d-none">
-                    <table class="table table-sm table-bordered">
+                    <table class="table table-sm table-bordered cards_table_ajax">
                         <thead>
                             <tr>
                                 <th>Certificate #</th>
@@ -85,6 +85,8 @@
             $(document).find(".card_table").removeClass("d-none");
             $(document).find(".loading").addClass("d-none");
 
+            $(document).find(".cards_table_ajax tbody").empty();
+
             $.each(order_cards, function(k,v){
 
                 title = v["Year"] +
@@ -96,8 +98,12 @@
 
                 certificate_number = v["certificate_number"];
 
-                console.log(v);
-
+                $(document).find(".cards_table_ajax tbody").append(
+                    "<tr>" +
+                        "<td>" + certificate_number + "</td>" +
+                        "<td>" + title + "</td>" +
+                    "</tr>"
+                );
             });
         });
     }
