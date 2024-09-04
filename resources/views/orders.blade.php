@@ -92,11 +92,15 @@
 
         var defObject = $.Deferred();  // create a deferred object.
 
+        $.ajaxSetup({
+            headers:
+            { 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content') }
+        });
+
         $.ajax({
             type: 'post',
             url: "/data/post",
             data: {
-                _token: "{{ csrf_token() }}",
                 action: "order_cards",
                 order_id, order_id
             },
