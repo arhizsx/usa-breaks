@@ -45,6 +45,7 @@
                 </div>
                 <div class="download_link text-center py-5">
                     <i class="fas fa-circle-down fa-beat text-primary fa-9x" style="--fa-beat-scale: 1.2;"></i>
+                    <a href="" class="download_link" class="btn btn-xl btn-primary form-control">Download File</a>
                 </div>
                 <div class="loading text-center py-3">
                     <i class="fas fa-spinner fa-pulse fa-9x"></i>
