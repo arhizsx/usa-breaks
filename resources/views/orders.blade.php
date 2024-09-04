@@ -45,7 +45,7 @@
     let modal = "#installation_details";
     let datagrid = "#gridContainer";
     let datasource = '/data/orders';
-    let columns = ['Order No', 'Filename', 'Certificates', 'status', 'created_at', 'updated_at'];
+    let columns = ['id', 'filename', 'certificates', 'status', 'created_at', 'updated_at'];
 
     $(() => {
 
