@@ -187,7 +187,6 @@
 
         e.preventDefault();
 
-        window.open( $(this).attr("href"), 'jpg');
 
         console.log( $(this).data("order_id") );
 
@@ -196,6 +195,8 @@
         $.when( order ).done( function( order ){
 
             if( order == true ){
+
+                window.open( $(this).attr("href"), 'jpg');
 
                 $(document).find("#gridContainer").dxDataGrid("instance").refresh();
                 $(document).find("#installation_details").modal("hide");
