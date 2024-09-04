@@ -67,7 +67,7 @@
 
     $(() => {
 
-        $(datagrid).setDatagrid( modal, datasource, columns );
+        $(datagrid).setDatagrid( modal, datasource, columns, callback );
 
     });
 
