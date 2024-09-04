@@ -48,7 +48,7 @@
                         <i class="fas fa-circle-down fa-beat text-primary fa-9x" style="--fa-beat-scale: 1.2;"></i>
                     </div>
                     <div class="mt-5">
-                        <a href="" class="download_link" class="btn btn-xl btn-primary" style="background: blue; color:white; font-size: 1.2em; padding: 10px 20px 10px 20px; border-radius: 10px;">Download File</a>
+                        <a href="" class="download_link" data-order_id="" class="btn btn-xl btn-primary" style="background: blue; color:white; font-size: 1.2em; padding: 10px 20px 10px 20px; border-radius: 10px;">Download File</a>
                     </div>
                 </div>
                 <div class="loading text-center py-3">
@@ -92,6 +92,7 @@
         $(document).find(".download_link").addClass("d-none");
         $(document).find(".loading").removeClass("d-none");
         $(document).find(".download_zip_btn").attr("data-order_id", info.id);
+        $(document).find(".download_link").attr("data-order_id", info.id);
 
         $.when( order_cards ).done( function( order_cards ){
 
@@ -193,6 +194,10 @@
 
     }
 
+    $(document).on("click", ".download_link", function(e){
 
+        console.log( $(this).data("order_id")  );
+
+    });
 
 </script>
