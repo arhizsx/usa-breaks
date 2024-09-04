@@ -119,7 +119,7 @@ class DataController extends Controller
 
         // UPDATE ORDER
         $scrapers = Scraper::where("order_id",$scraper->order_id)->get();
-        dd($scrapers);
+        dd( count($scrapers) );
 
         if( $scrapers == 0 ){
 
