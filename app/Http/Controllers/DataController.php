@@ -31,7 +31,7 @@ class DataController extends Controller
                             ->orderBy("id", "desc")
                             ->get();
 
-                dd($data);
+                dd($data->items);
 
                 break;
 
