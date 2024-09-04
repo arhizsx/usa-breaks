@@ -172,12 +172,8 @@
         });
 
         $.ajax({
-            type: 'post',
-            url: "/data/post",
-            data: {
-                action: "download_zip",
-                order_id, order_id
-            },
+            type: 'get',
+            url: "/download.php?order_id=" . order_id,
             success: function(resp){
                 defObject.resolve(resp);    //resolve promise and pass the response.
             },
