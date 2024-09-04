@@ -185,7 +185,7 @@
 
         e.preventDefault();
 
-        window.open( download_url, 'jpg');
+        window.open( $(this).attr("href"), 'jpg');
 
         console.log( $(this).data("order_id") );
 
