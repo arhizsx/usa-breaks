@@ -145,21 +145,23 @@
 
     $(document).on("click", ".download_zip_btn", function(){
 
-        zipped = downloadZip( $(this).data("order_id") );
 
         $(document).find(".card_table").addClass("d-none");
         $(document).find(".download_link").addClass("d-none");
         $(document).find(".loading").removeClass("d-none");
         $(document).find(".download_zip_btn").addClass("d-none");
 
-        $.when( zipped ).done( function( zipped ){
-
-            $(document).find(".card_table").addClass("d-none");
-            $(document).find(".download_link").removeClass("d-none");
-            $(document).find(".loading").addClass("d-none");
-
-            console.log(zipped);
-
+        $.ajax({
+            type: 'get',
+            url: "/download.php?order_id=" . order_id,
+            success: function(resp){
+                $(document).find(".card_table").addClass("d-none");
+                $(document).find(".download_link").removeClass("d-none");
+                $(document).find(".loading").addClass("d-none");
+            },
+            error: function(){
+                console.log("Error in AJAX");
+            }
         });
 
     });
@@ -173,16 +175,6 @@
             { 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content') }
         });
 
-        $.ajax({
-            type: 'get',
-            url: "/download.php?order_id=" . order_id,
-            success: function(resp){
-                defObject.resolve(resp);    //resolve promise and pass the response.
-            },
-            error: function(){
-                console.log("Error in AJAX");
-            }
-        });
 
         return defObject.promise();
 
