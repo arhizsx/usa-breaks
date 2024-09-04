@@ -146,9 +146,12 @@
 
         zipped = downloadZip( $(this).data("order_id") );
 
+
+
         $(document).find(".card_table").addClass("d-none");
         $(document).find(".download_link").addClass("d-none");
         $(document).find(".loading").removeClass("d-none");
+        $(document).find(".download_zip").addClass("d-none");
 
         $.when( zipped ).done( function( zipped ){
 
@@ -187,5 +190,7 @@
         return defObject.promise();
 
     }
+
+
 
 </script>
