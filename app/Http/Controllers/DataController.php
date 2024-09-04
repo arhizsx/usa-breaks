@@ -158,7 +158,7 @@ class DataController extends Controller
 
     function orderDownloaded( $request ){
 
-        $order = Orders::find( $request->order_id * 1 );
+        $order = Orders::where( "id", $request->order_id );
 
         $order->status = "DOWNLOADED";
 
