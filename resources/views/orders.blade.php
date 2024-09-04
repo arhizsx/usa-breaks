@@ -44,7 +44,7 @@
                     </table>
                 </div>
                 <div class="download_link text-center py-3">
-                    <i class="fas fa-circle-down fa-fa-beat fa-9x" style="--fa-beat-scale: 2.0;"></i>
+                    <i class="fas fa-circle-down fa-beat fa-9x" style="--fa-beat-scale: 2.0;"></i>
                 </div>
                 <div class="loading text-center py-3">
                     <i class="fas fa-spinner fa-pulse fa-9x"></i>
