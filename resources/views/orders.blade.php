@@ -158,6 +158,9 @@
                 $(document).find(".card_table").addClass("d-none");
                 $(document).find(".download_link").removeClass("d-none");
                 $(document).find(".loading").addClass("d-none");
+
+                console.log(resp);
+
             },
             error: function(){
                 console.log("Error in AJAX");
