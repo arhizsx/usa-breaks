@@ -30,7 +30,7 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <div class="card_table">
+                <div class="card_table d-none">
                     <table class="table table-sm table-bordered">
                         <thead>
                             <tr>
@@ -74,10 +74,46 @@
     function callbackAction(data){
 
         let info = JSON.parse( JSON.stringify(data) );
-        console.log( info );
 
+        order_cards = orderCards( info.id );
+
+        $(document).find(".card_table").addClass("d-none");
+        $(document).find(".loading").removeClass("d-none");
+
+        $.when( order_cards ).done( function( order_cards ){
+
+            $(document).find(".card_table").removeClass("d-none");
+            $(document).find(".loading").addClass("d-none");
+
+        });
     }
 
+    function orderCards(order_id) {
+
+        var defObject = $.Deferred();  // create a deferred object.
+
+        $.ajax({
+            type: 'post',
+            url: "/data/post",
+            data: {
+                "action": "order_cards",
+                "order_id", info.id
+            },
+            enctype: 'multipart/form-data',
+            processData: false,
+            contentType: false,
+            success: function(resp){
+                defObject.resolve(resp);    //resolve promise and pass the response.
+            },
+            error: function(){
+                console.log("Error in AJAX");
+            }
+        });
+
+        return defObject.promise();
+
+
+    }
 
 
 </script>
