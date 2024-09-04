@@ -80,6 +80,7 @@
 
         order_cards = orderCards( info.id );
 
+        $(document).find(".download_zip_btn").removeClass("d-none");
         $(document).find(".card_table").addClass("d-none");
         $(document).find(".download_link").addClass("d-none");
         $(document).find(".loading").removeClass("d-none");
@@ -145,8 +146,6 @@
     $(document).on("click", ".download_zip_btn", function(){
 
         zipped = downloadZip( $(this).data("order_id") );
-
-
 
         $(document).find(".card_table").addClass("d-none");
         $(document).find(".download_link").addClass("d-none");
