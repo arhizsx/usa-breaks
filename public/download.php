@@ -8,6 +8,6 @@ $command = "python3 /var/www/scraper/download_images.py $order_id $zip_filename 
 // Execute the Python script and capture output and errors
 $output = shell_exec($command);
 
-print_r($output);
+return $output;
 
 ?>
