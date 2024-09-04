@@ -73,9 +73,8 @@
 
     function callbackAction(data){
 
-        console.log( data );
-
         let info = JSON.parse( JSON.stringify(data) );
+        console.log( info );
 
     }
 
