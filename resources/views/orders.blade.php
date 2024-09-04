@@ -143,29 +143,38 @@
 
     }
 
-    $(document).on("click", ".download_zip_btn", function(){
+    $(document).on("click", ".download_zip_btn", function(e){
 
+        e.preventDefault();
 
         $(document).find(".card_table").addClass("d-none");
         $(document).find(".download_link").addClass("d-none");
         $(document).find(".loading").removeClass("d-none");
         // $(document).find(".download_zip_btn").addClass("d-none");
 
-        $.ajax({
+		$.ajax({
 			method: 'get',
-            url: "/download.php?order_id=" . order_id,
-            success: function(resp){
-                $(document).find(".card_table").addClass("d-none");
-                $(document).find(".download_link").removeClass("d-none");
-                $(document).find(".loading").addClass("d-none");
+			url: "/wp-json/ebayintegration/v1/ajax?action=refreshToken",
+			success: function(resp){
 
-                console.log(resp);
+				var status = 'active';
+				refreshStatus( status, "btn-primary" );
 
-            },
-            error: function(){
-                console.log("Error in AJAX");
-            }
-        });
+				var status = 'awaiting';
+				refreshStatus( status, "btn-warning" );
+
+				var status = 'sold';
+				refreshStatus( status, "btn-success" );
+
+				var status = 'unsold';
+				refreshStatus( status, "btn-danger" );
+
+			},
+			error: function(){
+				console.log("Error in AJAX");
+			}
+		});
+
 
     });
 
