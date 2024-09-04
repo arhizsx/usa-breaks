@@ -184,10 +184,12 @@
     $(document).on("click", ".download_link", function(e){
 
         e.preventDefault();
-        // try download btn
+
+        window.open( download_url, 'jpg');
+
         console.log( $(this).data("order_id") );
 
-        var order = orderDownloaded( $(this).data("order_id") );
+        var order = orderDownloaded( $(this).data("order_id"), $(this).attr("href") );
 
         $.when( order ).done( function( order ){
 
@@ -202,9 +204,11 @@
 
     });
 
-    function orderDownloaded(order_id) {
+    function orderDownloaded(order_id, url) {
 
         var defObject = $.Deferred();  // create a deferred object.
+
+        window.open( url, '_blank');
 
         $.ajaxSetup({
             headers:
