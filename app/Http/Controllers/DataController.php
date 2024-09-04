@@ -122,8 +122,6 @@ class DataController extends Controller
                     ->where("status","QUEUED")
                     ->get();
 
-        dd( count($scrapers) );
-
         if( $scrapers == 0 ){
 
             $order = Orders::find( $scraper->order_id );
