@@ -85,6 +85,11 @@
             $(document).find(".card_table").removeClass("d-none");
             $(document).find(".loading").addClass("d-none");
 
+            $.each(order_cards, function(k,v){
+                console.log(v);
+            });
+
+
         });
     }
 
