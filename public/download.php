@@ -8,6 +8,6 @@ $return_var = 0;
 
 exec($command, $output, $return_var);
 
-echo $output;
+print_r($output);
 
 ?>
