@@ -200,8 +200,9 @@
 
                 window.open( $(this).attr("href"), 'jpg');
 
-                $(document).find("#gridContainer").dxDataGrid("instance").refresh();
-                $(document).find("#installation_details").modal("hide");
+                location.reload();
+                // $(document).find("#gridContainer").dxDataGrid("instance").refresh();
+                // $(document).find("#installation_details").modal("hide");
 
             }
 
