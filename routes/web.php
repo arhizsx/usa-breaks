@@ -18,6 +18,11 @@ Route::group(['middleware' => ['auth', 'verified']], function () {
         return view('scraped');
     })->name('scraped');
 
+    Route::get('/failed', function () {
+        return view('failed');
+    })->name('failed');
+
+
     Route::get('/orders', function () {
         return view('orders');
     })->name('orders');

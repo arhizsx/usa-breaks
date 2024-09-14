@@ -21,6 +21,9 @@
                     <x-nav-link href="{{ route('scraped') }}" :active="request()->routeIs('scraped')">
                         {{ __('Processed') }}
                     </x-nav-link>
+                    <x-nav-link href="{{ route('failed') }}" :active="request()->routeIs('failed')">
+                        {{ __('Failed') }}
+                    </x-nav-link>
                     <x-nav-link href="{{ route('orders') }}" :active="request()->routeIs('orders')">
                         {{ __('Orders') }}
                     </x-nav-link>
@@ -156,6 +159,9 @@
             </x-responsive-nav-link>
             <x-responsive-nav-link href="{{ route('scraped') }}" :active="request()->routeIs('scraped')">
                 {{ __('Processed') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link href="{{ route('failed') }}" :active="request()->routeIs('failed')">
+                {{ __('Failed') }}
             </x-responsive-nav-link>
             <x-responsive-nav-link href="{{ route('orders') }}" :active="request()->routeIs('orders')">
                 {{ __('Orders') }}

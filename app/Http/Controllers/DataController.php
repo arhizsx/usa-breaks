@@ -48,6 +48,12 @@ class DataController extends Controller
                             ->get();
                 break;
 
+            case "failed":
+
+                $data = DB::table("view_scraper")
+                            ->whereIn("status", array("ERROR"))
+                            ->where("user_id", Auth::user()->id )
+                            ->get();
                 break;
 
             default:
