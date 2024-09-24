@@ -18,53 +18,111 @@ class DataController extends Controller
 
             case "orders_active":
 
-                $data = Orders::where("user_id", Auth::user()->id )
-                            ->where("status", "ACTIVE")
-                            ->orderBy("id", "desc")
-                            ->get();
+                if( Auth::user()->id == 1 ){
+                    $data = Orders::where("status", "ACTIVE")
+                        ->orderBy("id", "desc")
+                        ->get();
+
+                } else {
+                    $data = Orders::where("user_id", Auth::user()->id )
+                        ->where("status", "ACTIVE")
+                        ->orderBy("id", "desc")
+                        ->get();
+
+                }
+
                 break;
 
             case "orders":
 
-                $data = Orders::where("user_id", Auth::user()->id )
-                            ->whereNot("status", "ACTIVE")
-                            ->orderBy("id", "desc")
-                            ->get();
+                if( Auth::user()->id == 1 ){
+
+                    $data = Orders::whereNot("status", "ACTIVE")
+                        ->orderBy("id", "desc")
+                        ->get();
+
+                } else {
+                    
+                    $data = Orders::where("user_id", Auth::user()->id )
+                        ->whereNot("status", "ACTIVE")
+                        ->orderBy("id", "desc")
+                        ->get();
+
+                }
 
                 break;
 
             case "queued":
 
-                $data = Scraper::whereIn("status", array("QUEUED","RUNNING"))
-                            ->where("user_id", Auth::user()->id )
-                            ->get();
+                if( Auth::user()->id == 1 ){
+                    $data = Scraper::whereIn("status", array("QUEUED","RUNNING"))
+                        ->get();
+                } else {
+                    $data = Scraper::whereIn("status", array("QUEUED","RUNNING"))
+                        ->where("user_id", Auth::user()->id )
+                        ->get();
+
+                }
                 break;
 
             case "scraped":
 
-                $data = DB::table("view_scraper")
-                            ->whereIn("status", array("PROCESSED"))
-                            ->where("user_id", Auth::user()->id )
-                            ->orderBy("order_id", "desc")
-                            ->get();
+                if( Auth::user()->id == 1 ){
+
+                    $data = DB::table("view_scraper")
+                        ->whereIn("status", array("PROCESSED"))
+                        ->orderBy("order_id", "desc")
+                        ->get();
+
+                } else {
+
+                    $data = DB::table("view_scraper")
+                        ->whereIn("status", array("PROCESSED"))
+                        ->where("user_id", Auth::user()->id )
+                        ->orderBy("order_id", "desc")
+                        ->get();
+
+                }
+
                 break;
 
             case "failed":
 
-                $data = DB::table("view_scraper")
-                            ->whereIn("status", array("ERROR"))
-                            ->where("user_id", Auth::user()->id )
-                            ->orderBy("order_id", "desc")
-                            ->get();
+                if( Auth::user()->id == 1 ){
+
+                    $data = DB::table("view_scraper")
+                        ->whereIn("status", array("ERROR"))
+                        ->orderBy("order_id", "desc")
+                        ->get();
+
+                } else {
+                    $data = DB::table("view_scraper")
+                        ->whereIn("status", array("ERROR"))
+                        ->where("user_id", Auth::user()->id )
+                        ->orderBy("order_id", "desc")
+                        ->get();
+
+                }
                 break;
 
             case "noimage":
 
-                $data = DB::table("view_scraper")
-                            ->whereIn("status", array("NO IMAGE"))
-                            ->where("user_id", Auth::user()->id )
-                            ->orderBy("order_id", "desc")
-                            ->get();
+                if( Auth::user()->id == 1 ){
+
+                    $data = DB::table("view_scraper")
+                        ->whereIn("status", array("NO IMAGE"))
+                        ->orderBy("order_id", "desc")
+                        ->get();
+
+                } else {
+                    
+                    $data = DB::table("view_scraper")
+                        ->whereIn("status", array("NO IMAGE"))
+                        ->where("user_id", Auth::user()->id )
+                        ->orderBy("order_id", "desc")
+                        ->get();
+
+                }
                 break;
 
             default:
@@ -93,6 +151,7 @@ class DataController extends Controller
                 break;
 
             case "order_cards":
+
 
                 $data = DB::table("view_scraper")
                             ->where("order_id", $request->order_id)
