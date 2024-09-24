@@ -120,7 +120,7 @@
                     "<tr>" +
                         "<td><img src='" + imgF + "' ></td>" +
                         "<td><img src='" + imgB + "' ></td>" +
-                        "<td>" + certificate_number + "</td>" +
+                        "<td><a href='https://www.psacard.com/cert/" + certificate_number + "/psa' target='_blank'>" + certificate_number + "</a></td>" +
                         "<td>" + title + "</td>" +
                     "</tr>"
                 );
