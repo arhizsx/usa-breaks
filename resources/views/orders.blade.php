@@ -34,7 +34,7 @@
                     <table class="table table-sm table-bordered table-striped cards_table_ajax">
                         <thead>
                             <tr>
-                                <th width="120px">Image</th>
+                                <th width="50px">Image</th>
                                 <th>Certificate #</th>
                                 <th>Title</th>
                             </tr>
@@ -117,7 +117,7 @@
 
                 $(document).find(".cards_table_ajax tbody").append(
                     "<tr>" +
-                        "<td class='row'><img src='" + imgF + "' width='40px' ><img src='" + imgB + "' width='40px' ></td>" +
+                        "<td class='row'><img src='" + imgF + "' ></td>" +
                         "<td>" + certificate_number + "</td>" +
                         "<td>" + title + "</td>" +
                     "</tr>"
