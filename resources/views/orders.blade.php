@@ -112,11 +112,12 @@
                         v["Grade"];
 
                 certificate_number = v["certificate_number"];
-                img = v["certImgFront"];
+                imgF = v["certImgFront"];
+                imgB = v["certImgBack"];
 
                 $(document).find(".cards_table_ajax tbody").append(
                     "<tr>" +
-                        "<td><img src='" + img + "' width='65px' ></td>" +
+                        "<td><img src='" + imgF + "' width='65px' ><img src='" + imgB + "' width='65px' ></td>" +
                         "<td>" + certificate_number + "</td>" +
                         "<td>" + title + "</td>" +
                     "</tr>"
