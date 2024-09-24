@@ -31,6 +31,7 @@
             </div>
             <div class="modal-body">
                 <a id="check_psa" target="_blank" href="" class="btn btn-danger my-3 py-3 form-control">Check PSA</a>
+                <a id="requeue"href="#" class="btn btn-success my-3 py-3 form-control">Re-Queue</a>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
