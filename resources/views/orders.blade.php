@@ -34,6 +34,7 @@
                     <table class="table table-sm table-bordered table-striped cards_table_ajax">
                         <thead>
                             <tr>
+                                <th>Image</th>
                                 <th>Certificate #</th>
                                 <th>Title</th>
                             </tr>
