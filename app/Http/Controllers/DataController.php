@@ -152,11 +152,19 @@ class DataController extends Controller
 
             case "order_cards":
 
+                if( Auth::user()->id == 1 ) {
+                    $data = DB::table("view_scraper")
+                        ->where("order_id", $request->order_id)
+                        ->get();
 
-                $data = DB::table("view_scraper")
-                            ->where("order_id", $request->order_id)
-                            ->where("user_id", Auth::user()->id )
-                            ->get();
+                } else {
+                    $data = DB::table("view_scraper")
+                        ->where("order_id", $request->order_id)
+                        ->where("user_id", Auth::user()->id )
+                        ->get();
+
+                }
+
 
                 return $data;
                 break;
