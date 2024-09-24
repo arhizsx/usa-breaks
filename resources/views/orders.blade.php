@@ -117,7 +117,7 @@
 
                 $(document).find(".cards_table_ajax tbody").append(
                     "<tr>" +
-                        "<td class='row'><img src='" + imgF + "' ></td>" +
+                        "<td><img src='" + imgF + "' ></td>" +
                         "<td>" + certificate_number + "</td>" +
                         "<td>" + title + "</td>" +
                     "</tr>"
