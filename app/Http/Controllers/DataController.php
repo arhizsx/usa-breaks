@@ -45,6 +45,7 @@ class DataController extends Controller
                 $data = DB::table("view_scraper")
                             ->whereIn("status", array("PROCESSED"))
                             ->where("user_id", Auth::user()->id )
+                            ->orderBy("order_id", "desc")
                             ->get();
                 break;
 
@@ -53,6 +54,16 @@ class DataController extends Controller
                 $data = DB::table("view_scraper")
                             ->whereIn("status", array("ERROR"))
                             ->where("user_id", Auth::user()->id )
+                            ->orderBy("order_id", "desc")
+                            ->get();
+                break;
+
+            case "noimage":
+
+                $data = DB::table("view_scraper")
+                            ->whereIn("status", array("NO IMAGE"))
+                            ->where("user_id", Auth::user()->id )
+                            ->orderBy("order_id", "desc")
                             ->get();
                 break;
 

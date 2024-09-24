@@ -22,6 +22,9 @@ Route::group(['middleware' => ['auth', 'verified']], function () {
         return view('failed');
     })->name('failed');
 
+    Route::get('/noimg', function () {
+        return view('noimg');
+    })->name('noimg');
 
     Route::get('/orders', function () {
         return view('orders');
