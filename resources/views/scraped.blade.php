@@ -111,8 +111,9 @@
                                 "white-space": "nowrap",
                                 "overflow": "hidden",
                                 "text-overflow": "ellipsis",
-                                "max-width": "100%", // ensures the cell size limits the text
-                                "display": "inline-block" // ensures the div stays within the column
+                                "max-width": "200px", // Ensures the text doesn't overflow too much
+                                "display": "inline-block",
+                                "width": "100%" // Ensures the width is adjustable
                             })
                             .append(`${options.data.Year} `)
                             .append(`${options.data.Brand} `)
