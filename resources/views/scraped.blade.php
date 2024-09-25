@@ -108,12 +108,10 @@
 
                     $('<div>')
                             .css({
-                                "white-space": "nowrap",
-                                "overflow": "hidden",
-                                "text-overflow": "ellipsis",
-                                "max-width": "600px", // Ensures the text doesn't overflow too much
-                                "display": "inline-block",
-                                "width": "100%" // Ensures the width is adjustable
+                                "white-space": "normal",  // Allows wrapping to new lines
+                                "word-wrap": "break-word", // Breaks long words
+                                "overflow": "visible",     // No overflow restriction
+                                "max-width": "300px",      // You can adjust the w
                             })
                             .append(`${options.data.Year} `)
                             .append(`${options.data.Brand} `)

@@ -1,9 +1,9 @@
 
-$.fn.setDatagrid = function( modal, datasource, columns, callback=false){
+$.fn.setDatagrid = function (modal, datasource, columns, callback = false) {
 
     let whatmodal = modal;
 
-    $( this ).dxDataGrid({
+    $(this).dxDataGrid({
         dataSource: datasource,
         rowAlternationEnabled: true,
         selection: {
@@ -11,14 +11,14 @@ $.fn.setDatagrid = function( modal, datasource, columns, callback=false){
         },
         showBorders: true,
         columnHidingEnabled: true,
-        columnAutoWidth: true,
+        columnAutoWidth: false,
         export: {
             enabled: true,
         },
-        columnFixing:{
-                enabled: false
+        columnFixing: {
+            enabled: false
         },
-        onContentReady: function(e){
+        onContentReady: function (e) {
         },
         searchPanel: {
             visible: true,
@@ -51,9 +51,9 @@ $.fn.setDatagrid = function( modal, datasource, columns, callback=false){
         headerFilter: {
             visible: true,
         },
-        onRowClick: function(e) {
+        onRowClick: function (e) {
 
-            $(this).openModal( whatmodal, e.data, callback );
+            $(this).openModal(whatmodal, e.data, callback);
 
         },
         allowColumnResizing: {
@@ -65,21 +65,21 @@ $.fn.setDatagrid = function( modal, datasource, columns, callback=false){
 }
 
 
-$.fn.openModal = function( modal, data, callback ){
+$.fn.openModal = function (modal, data, callback) {
 
     $(document).find(modal).modal("show");
 
-    $.each( data, function( k, v){
+    $.each(data, function (k, v) {
 
-        $(modal).find("input[name='" + k + "']").val( v );
-        $(modal).find("textarea[name='" + k + "']").text( v );
+        $(modal).find("input[name='" + k + "']").val(v);
+        $(modal).find("textarea[name='" + k + "']").text(v);
 
-    } );
+    });
 
     $(modal).find(".btn-action").attr("data-id", data.id.toString());
 
-    if(callback != false){
-        eval( callback + "(data)" );
+    if (callback != false) {
+        eval(callback + "(data)");
     }
 
 };
