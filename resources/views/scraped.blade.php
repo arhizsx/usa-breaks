@@ -111,7 +111,6 @@
                                 "white-space": "normal",  // Allows wrapping to new lines
                                 "word-wrap": "break-word", // Breaks long words
                                 "overflow": "visible",     // No overflow restriction
-                                "max-width": "300px",      // You can adjust the w
                             })
                             .append(`${options.data.Year} `)
                             .append(`${options.data.Brand} `)
