@@ -61,7 +61,7 @@
         {
             dataField: 'certImgFront',
             caption: 'Front',
-            width: 100,
+            width: 50,
             cellTemplate(container, options) {
                 if (options.value != null)  {
                     $('<div>')
@@ -69,7 +69,7 @@
                         src: options.value, 
                         alt: `Front of ${options.data.certificate_number}`, 
                         width: '100%', // ensures the image fits within the cell
-                        maxWidth: '100px',  // Limiting the width
+                        maxWidth: '50px',  // Limiting the width
                         objectFit: 'contain' // Ensure it scales down but keeps aspect ratio                        
                     }))                    
                     .appendTo(container);
@@ -80,7 +80,7 @@
         {
             dataField: 'certImgBack',
             caption: 'Back',
-            width: 100,
+            width: 50,
             cellTemplate(container, options) {
                 if (options.value != null)  {
                     $('<div>')
@@ -88,7 +88,7 @@
                         src: options.value, 
                         alt: `Back of ${options.data.certificate_number}`, 
                         width: '100%', // ensures the image fits within the cell
-                        maxWidth: '100px',  // Limiting the width
+                        maxWidth: '50px',  // Limiting the width
                         objectFit: 'contain' // Ensure it scales down but keeps aspect ratio                     
                     }))
                     .appendTo(container);
