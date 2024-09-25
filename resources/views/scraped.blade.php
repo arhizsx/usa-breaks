@@ -94,7 +94,13 @@
             cellTemplate(container, options) {
                 if (options.data.data != null)  {
 
-                    $('<div>').append(`${options.data.Year} `)
+                    $('<div>')
+                            .css({
+                                "white-space": "nowrap",
+                                "overflow": "hidden",
+                                "text-overflow": "ellipsis"
+                            })                    
+                            .append(`${options.data.Year} `)
                             .append(`${options.data.Brand} `)
                             .append(`${options.data.Player} `)
                             .append(`${options.data['Card Number']} `)
