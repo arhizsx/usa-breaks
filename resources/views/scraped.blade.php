@@ -111,7 +111,7 @@
                                 "white-space": "nowrap",
                                 "overflow": "hidden",
                                 "text-overflow": "ellipsis",
-                                "max-width": "400px", // Ensures the text doesn't overflow too much
+                                "max-width": "600px", // Ensures the text doesn't overflow too much
                                 "display": "inline-block",
                                 "width": "100%" // Ensures the width is adjustable
                             })
