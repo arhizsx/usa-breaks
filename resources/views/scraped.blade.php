@@ -65,7 +65,11 @@
             cellTemplate(container, options) {
                 if (options.value != null)  {
                     $('<div>')
-                    .append($('<img>', { src: options.value, alt: `Front of ${options.data.certificate_number}` }))
+                    .append($('<img>', { 
+                        src: options.value, 
+                        alt: `Front of ${options.data.certificate_number}`, 
+                        width: '100%' // ensures the image fits within the cell
+                    }))                    
                     .appendTo(container);
                 }
             },
@@ -78,7 +82,11 @@
             cellTemplate(container, options) {
                 if (options.value != null)  {
                     $('<div>')
-                    .append($('<img>', { src: options.value, alt: `Front of ${options.data.certificate_number}` }))
+                    .append($('<img>', { 
+                        src: options.value, 
+                        alt: `Back of ${options.data.certificate_number}`, 
+                        width: '100%' // ensures the image fits within the cell
+                    }))
                     .appendTo(container);
                 }
             },
@@ -98,8 +106,10 @@
                             .css({
                                 "white-space": "nowrap",
                                 "overflow": "hidden",
-                                "text-overflow": "ellipsis"
-                            })                    
+                                "text-overflow": "ellipsis",
+                                "max-width": "100%", // ensures the cell size limits the text
+                                "display": "inline-block" // ensures the div stays within the column
+                            })
                             .append(`${options.data.Year} `)
                             .append(`${options.data.Brand} `)
                             .append(`${options.data.Player} `)
