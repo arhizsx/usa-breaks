@@ -116,7 +116,6 @@ class DataController extends Controller
                     ->orderBy("order_id", "desc")
                     ->get();
 
-                $data = [];
                 break;
 
             default:
