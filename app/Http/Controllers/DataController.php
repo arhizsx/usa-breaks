@@ -107,22 +107,15 @@ class DataController extends Controller
 
             case "noimage":
 
-                if( Auth::user()->id == 1 ){
 
-                    $data = DB::table("view_scraper")
-                        ->whereIn("status", array("NO IMAGE"))
-                        ->orderBy("order_id", "desc")
-                        ->get();
+                $data = DB::table("view_scraper")
+                    ->where(function ($query){
+                        $query->where("certImgFront", "https://5starcards.com/wp-content/uploads/2023/09/5-star-cards-logo.png")
+                                ->orWhere("certImgBack", "https://5starcards.com/wp-content/uploads/2023/09/5-star-cards-logo.png");
+                    })
+                    ->orderBy("order_id", "desc")
+                    ->get();
 
-                } else {
-                    
-                    $data = DB::table("view_scraper")
-                        ->whereIn("status", array("NO IMAGE"))
-                        ->where("user_id", Auth::user()->id )
-                        ->orderBy("order_id", "desc")
-                        ->get();
-
-                }
                 break;
 
             default:
