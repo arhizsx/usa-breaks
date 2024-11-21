@@ -107,7 +107,7 @@ class DataController extends Controller
 
             case "noimage":
 
-
+                
                 $data = DB::table("view_scraper")
                     ->where(function ($query){
                         $query->where("certImgFront", "https://5starcards.com/wp-content/uploads/2023/09/5-star-cards-logo.png")
@@ -116,6 +116,7 @@ class DataController extends Controller
                     ->orderBy("order_id", "desc")
                     ->get();
 
+                $data = [];
                 break;
 
             default:
