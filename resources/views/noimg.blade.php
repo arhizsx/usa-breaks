@@ -43,7 +43,7 @@
 
 <script>
 
-    let modal = "#card_details"; 
+    let modal = ""; 
     let datagrid = "#gridContainer";
     let datasource = '/data/noimage';
     let columns = [
