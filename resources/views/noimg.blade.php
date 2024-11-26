@@ -43,7 +43,7 @@
 
 <script>
 
-    let modal = "#card_details";
+    let modal = "#card_details"; 
     let datagrid = "#gridContainer";
     let datasource = '/data/noimage';
     let columns = [
@@ -87,6 +87,15 @@
                     }))
                     .appendTo(container);
                 }
+            },
+        },
+        {
+            dataField: null,
+            caption: 'Action',
+            width: 120,
+            cellTemplate(container, options) {
+                $('<div>')
+                    .appendTo(container);
             },
         },
         {
