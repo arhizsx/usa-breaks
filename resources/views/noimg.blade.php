@@ -102,6 +102,13 @@
                         class: 'btn btn-outline-primary btn-sm',
                         objectFit: 'contain'
                     }))
+                    .append($('<button>', { 
+                        width: '50%',
+                        type: 'button',
+                        html: '<i class="fa-solid fa-check"></i>',
+                        class: 'btn btn-outline-primary btn-sm',
+                        objectFit: 'contain'
+                    }))
                     .appendTo(container);
             },
         },
