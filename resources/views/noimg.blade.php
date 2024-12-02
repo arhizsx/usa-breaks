@@ -95,6 +95,11 @@
             width: 120,
             cellTemplate(container, options) {
                 $('<div>')
+                    .append($('<button>', { 
+                        width: '50%',
+                        type: 'button',
+                        text: 'GO'
+                    }))
                     .appendTo(container);
             },
         },
