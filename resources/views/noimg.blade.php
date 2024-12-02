@@ -154,6 +154,7 @@
     }
 
     function requeue(data){
+        console.log("REQUEUE");
         console.log(data);
     }
 
