@@ -90,15 +90,11 @@
             },
         },
         {
-            dataField: null,
-            caption: 'Action',
-            type: buttons,
+            type: "buttons",
             buttons: [{
-                name: "requeue",
-                text: 'Requeue',
-                class: "btn btn-sm"
-            }],
-            width: 120,
+                name: "save",
+                cssClass: "my-class"
+            }]
         },
         {
             dataField: 'certificate_number',
