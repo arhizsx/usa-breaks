@@ -94,10 +94,11 @@
             type: "buttons",
             buttons: [
                 {
-                    text: "My Command",
-                    hint: "My Command",
+                    text: "Re-Queue",
+                    hint: "Re-Queue",
+                    class: "btn btn-sm"
                     onClick: function (e) {
-                        // Execute your command here
+                        requeue( e.data );
                     }
                 }                
             ]
@@ -154,8 +155,8 @@
         console.log( info );
     }
 
-    $(document).find(".requeue").on("click", function(){
-        alert("test");
-    });
+    function requeue(data){
+        console.log(data);
+    }
 
 </script>
