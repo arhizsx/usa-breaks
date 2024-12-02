@@ -157,5 +157,8 @@
         console.log( info );
     }
 
+    $(document).on("click", ".requeue", function(){
+        console.log("Do requeue action");
+    });
 
 </script>
