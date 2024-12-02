@@ -92,7 +92,14 @@
         {
             type: "buttons",
             buttons: [
-            ]
+            {
+                text: "My Command",
+                icon: "/url/to/my/icon.ico",
+                hint: "My Command",
+                onClick: function (e) {
+                    // Execute your command here
+                }
+            }]  
         },
         {
             dataField: 'certificate_number',
