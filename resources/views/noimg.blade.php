@@ -93,6 +93,7 @@
             type: "buttons",
             buttons: [
             {
+                text: "refresh",
                 icon: "/files/refresh.png",
                 hint: "Refresh",
                 onClick: function (e) {
