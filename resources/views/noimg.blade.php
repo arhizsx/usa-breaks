@@ -96,7 +96,7 @@
                 icon: "/files/refresh.png",
                 hint: "Refresh",
                 onClick: function (e) {
-                    // Execute your command here
+                    console.log( e.data );
                 }
             }]  
         },
