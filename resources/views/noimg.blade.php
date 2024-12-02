@@ -98,7 +98,9 @@
                     .append($('<button>', { 
                         width: '50%',
                         type: 'button',
-                        text: 'GO'
+                        text: 'GO',
+                        class: 'btn btn-primary',
+                        objectFit: 'contain'
                     }))
                     .appendTo(container);
             },
