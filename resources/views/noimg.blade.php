@@ -99,7 +99,7 @@
                         width: '50%',
                         type: 'button',
                         text: 'GO',
-                        class: 'btn btn-primary',
+                        class: 'btn btn-outline-primary btn-sm',
                         objectFit: 'contain'
                     }))
                     .appendTo(container);
