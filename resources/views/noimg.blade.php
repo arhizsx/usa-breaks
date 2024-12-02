@@ -92,19 +92,13 @@
         {
             dataField: null,
             caption: 'Action',
+            type: buttons,
+            buttons: [{
+                name: "requeue",
+                text: 'Requeue',
+                class: "btn btn-sm"
+            }],
             width: 120,
-            cellTemplate(container, options) {
-                $('<div>')
-                    .append($('<a>', { 
-                        width: '100%',
-                        type: 'button',
-                        html: '<i class="fa-solid fa-arrows-rotate"></i>',
-                        class: 'btn btn-outline-primary btn-sm requeue',
-                        objectFit: 'contain',
-                        value: options.data.certificate_number
-                    }))
-                    .appendTo(container);
-            },
         },
         {
             dataField: 'certificate_number',
@@ -139,7 +133,6 @@
         }
     ];
     let callback = '';
-    let cellclickcallback = "requeue";
 
     $(() => {
 
@@ -159,10 +152,8 @@
         console.log( info );
     }
 
-    function requeue( data ){
-        
-        console.log( data );
-
-    }
+    $(document).find(".requeue").on("click", function(){
+        alert("test");
+    });
 
 </script>
