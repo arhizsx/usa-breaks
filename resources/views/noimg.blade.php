@@ -93,8 +93,8 @@
             type: "buttons",
             buttons: [
             {
-                text: "<i class='fa-solid fa-arrows-rotate'></i>",
-                hint: "My Command",
+                icon: "/files/refresh.png",
+                hint: "Refresh",
                 onClick: function (e) {
                     // Execute your command here
                 }
