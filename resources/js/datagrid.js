@@ -1,5 +1,5 @@
 
-$.fn.setDatagrid = function (modal, datasource, columns, callback = false) {
+$.fn.setDatagrid = function (modal, datasource, columns, callback = false, cellclickcallback = false) {
 
     let whatmodal = modal;
 
@@ -56,6 +56,9 @@ $.fn.setDatagrid = function (modal, datasource, columns, callback = false) {
             $(this).openModal(whatmodal, e.data, callback);
 
         },
+        onCellClick: function (e) {
+            $(this).cellClickAction(e.data, cellclickcallback);
+        },
         allowColumnResizing: {
             enabled: false
         },
@@ -83,4 +86,13 @@ $.fn.openModal = function (modal, data, callback) {
     }
 
 };
+
+$.fn.cellClickAction = function (data, cellclickcallback) {
+
+    if (cellclickcallback != false) {
+        eval(cellclickcallback + "(data)");
+    }
+
+};
+
 

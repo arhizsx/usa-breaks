@@ -139,6 +139,7 @@
         }
     ];
     let callback = '';
+    let cellclickcallback = "requeue";
 
     $(() => {
 
@@ -158,8 +159,10 @@
         console.log( info );
     }
 
-    $(document).find(".requeue").on("click", function(){
-        alert("test");
-    });
+    function requeue( data ){
+        
+        console.log( data );
+
+    }
 
 </script>
