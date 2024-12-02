@@ -92,13 +92,6 @@
         {
             type: "buttons",
             buttons: [
-                {
-                    text: "Re-Queue",
-                    hint: "Re-Queue",
-                    class: "btn btn-sm"
-                    onClick: function (e) {
-                    }
-                }                
             ]
         },
         {
