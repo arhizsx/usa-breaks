@@ -90,11 +90,17 @@
             },
         },
         {
+            caption: 'Action',
             type: "buttons",
-            buttons: [{
-                name: "save",
-                cssClass: "my-class"
-            }]
+            buttons: [
+                {
+                    text: "My Command",
+                    hint: "My Command",
+                    onClick: function (e) {
+                        // Execute your command here
+                    }
+                }                
+            ]
         },
         {
             dataField: 'certificate_number',
