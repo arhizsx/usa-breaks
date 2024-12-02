@@ -100,7 +100,8 @@
                         type: 'button',
                         html: '<i class="fa-solid fa-arrows-rotate"></i>',
                         class: 'btn btn-outline-primary btn-sm requeue',
-                        objectFit: 'contain'
+                        objectFit: 'contain',
+                        value: options.data.certificate_number
                     }))
                     .appendTo(container);
             },
@@ -157,8 +158,8 @@
         console.log( info );
     }
 
-    $(document).on("click", ".requeue", function(){
-        console.log("Do requeue action");
+    $(document).find(".requeue").on("click", function(){
+        console.log("test");
     });
 
 </script>
