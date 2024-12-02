@@ -93,7 +93,6 @@
             type: "buttons",
             buttons: [
             {
-                text: "My Command",
                 html: "<i class='fa-solid fa-arrows-rotate'></i>",
                 hint: "My Command",
                 onClick: function (e) {
