@@ -98,7 +98,7 @@
                     .append($('<button>', { 
                         width: '50%',
                         type: 'button',
-                        text: 'GO',
+                        text: '<i class="fa-solid fa-arrows-rotate"></i>',
                         class: 'btn btn-outline-primary btn-sm',
                         objectFit: 'contain'
                     }))
