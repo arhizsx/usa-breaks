@@ -98,7 +98,7 @@
                     hint: "Re-Queue",
                     class: "btn btn-sm"
                     onClick: function (e) {
-                        requeue( e.data );
+                        alert( "test" );
                     }
                 }                
             ]
