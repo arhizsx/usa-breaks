@@ -90,14 +90,14 @@
             },
         },
         {
-            dataField: "certificate_number",
+            caption: "Action"
             type: "buttons",
             buttons: [
             {
                 text: "Refresh",
                 hint: "Refresh",
                 onClick: function (e) {
-                    console.log( e );
+                    console.log( e.row.data );
                 }
             }]  
         },
