@@ -90,11 +90,11 @@
             },
         },
         {
+            dataField: "certificate_number",
             type: "buttons",
             buttons: [
             {
-                text: "refresh",
-                icon: "/files/refresh.png",
+                text: "Refresh",
                 hint: "Refresh",
                 onClick: function (options) {
                     console.log( options.data );
