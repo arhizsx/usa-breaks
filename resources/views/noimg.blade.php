@@ -97,7 +97,7 @@
                 text: "Refresh",
                 hint: "Refresh",
                 onClick: function (e) {
-                    console.log( e.row.data );
+                    requeue( e.row.data );
                 }
             }]  
         },
