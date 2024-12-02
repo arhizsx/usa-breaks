@@ -95,7 +95,7 @@
             width: 120,
             cellTemplate(container, options) {
                 $('<div>')
-                    .append($('<button>', { 
+                    .append($('<a>', { 
                         width: '100%',
                         type: 'button',
                         html: '<i class="fa-solid fa-arrows-rotate"></i>',
