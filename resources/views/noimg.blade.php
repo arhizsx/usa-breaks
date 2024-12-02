@@ -90,7 +90,6 @@
             },
         },
         {
-            caption: 'Action',
             type: "buttons",
             buttons: [
                 {
