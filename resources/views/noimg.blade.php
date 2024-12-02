@@ -137,7 +137,7 @@
             caption: 'Added At'
         }
     ];
-    let callback = 'callbackAction';
+    // let callback = 'callbackAction';
 
     $(() => {
 
