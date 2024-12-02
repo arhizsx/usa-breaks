@@ -96,8 +96,8 @@
             {
                 text: "Refresh",
                 hint: "Refresh",
-                onClick: function (options) {
-                    console.log( options.data );
+                onClick: function (e) {
+                    console.log( e );
                 }
             }]  
         },
