@@ -96,17 +96,10 @@
             cellTemplate(container, options) {
                 $('<div>')
                     .append($('<button>', { 
-                        width: '50%',
+                        width: '100%',
                         type: 'button',
                         html: '<i class="fa-solid fa-arrows-rotate"></i>',
-                        class: 'btn btn-outline-primary btn-sm',
-                        objectFit: 'contain'
-                    }))
-                    .append($('<button>', { 
-                        width: '50%',
-                        type: 'button',
-                        html: '<i class="fa-solid fa-check"></i>',
-                        class: 'btn btn-outline-primary btn-sm',
+                        class: 'btn btn-outline-primary btn-sm requeue',
                         objectFit: 'contain'
                     }))
                     .appendTo(container);
