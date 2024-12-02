@@ -159,7 +159,7 @@
     }
 
     $(document).find(".requeue").on("click", function(){
-        console.log("test");
+        alert("test");
     });
 
 </script>
