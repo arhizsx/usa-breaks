@@ -96,8 +96,8 @@
                 text: "refresh",
                 icon: "/files/refresh.png",
                 hint: "Refresh",
-                onClick: function (e) {
-                    console.log( e.data );
+                onClick: function (options) {
+                    console.log( options.data );
                 }
             }]  
         },
