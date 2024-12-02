@@ -94,7 +94,7 @@
             buttons: [
             {
                 text: "My Command",
-                html: "<i class="fa-solid fa-arrows-rotate"></i>",
+                html: "<i class='fa-solid fa-arrows-rotate'></i>",
                 hint: "My Command",
                 onClick: function (e) {
                     // Execute your command here
