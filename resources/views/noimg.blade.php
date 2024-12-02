@@ -98,7 +98,6 @@
                     hint: "Re-Queue",
                     class: "btn btn-sm"
                     onClick: function (e) {
-                        alert( "test" );
                     }
                 }                
             ]
