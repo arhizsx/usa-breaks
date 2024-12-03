@@ -166,6 +166,8 @@
 
     }
 
+    console.log($('meta[name="csrf-token"]').attr('content'));
+
     function postRequeue(data){
 
         var defObject = $.Deferred();  // create a deferred object.
