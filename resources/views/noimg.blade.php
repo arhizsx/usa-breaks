@@ -171,15 +171,15 @@
 
         var defObject = $.Deferred();  // create a deferred object.
 
-        postData = { 
+        postData = [
             data: data, 
             action: "requeue",
-        };
+        ];
 
         $.ajax({
             type: 'post',
             url: "/data/post",
-            data: JSON.stringify(postData),
+            data: postData,
             headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
             success: function(resp){
                 defObject.resolve(resp);    //resolve promise and pass the response.
