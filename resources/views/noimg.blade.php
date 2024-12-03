@@ -173,7 +173,7 @@
         postData = { 
             data: data, 
             action: "requeue",
-            _token: "{{ csrf_token() }}",            
+            _token: $('meta[name="csrf-token"]').attr('content')
         };
 
         $.ajax({
