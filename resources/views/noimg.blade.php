@@ -181,7 +181,7 @@
         $.ajax({
             type: 'post',
             url: "/data/post",
-            data: postData,
+            data: JSON.stringify(postData),
             enctype: 'multipart/form-data',
             processData: false,
             contentType: false,
