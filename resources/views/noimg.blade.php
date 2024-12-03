@@ -98,13 +98,25 @@
                 hint: "Refresh",
                 onClick: function (e) {
                     requeue( e.row.data );
+                    console.log(e.row.data);
                 }
             }]  
         },
         {
             dataField: 'certificate_number',
-            caption: 'Certificate #',
-            width: 120,
+            caption: 'Back',
+            width: 50,
+            cellTemplate(container, options) {
+                if (options.value != null)  {
+                    $('<div>')
+                    .append($('<a>', { 
+                        text: options.value, 
+                        href: `https://www.psacard.com/cert/${options.value}/psa`, 
+                        target: '_blank',
+                    }))
+                    .appendTo(container);
+                }
+            },
         },
         {
             dataField: null,
