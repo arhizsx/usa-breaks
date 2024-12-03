@@ -179,7 +179,10 @@
         $.ajax({
             type: 'post',
             url: "/data/post",
-            data: postData,
+            data: {
+                certificate_number: data,
+                action: "requeue",
+            },
             headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
             success: function(resp){
                 defObject.resolve(resp);    //resolve promise and pass the response.
