@@ -171,10 +171,6 @@
 
         var defObject = $.Deferred();  // create a deferred object.
 
-        postData = [
-            data: data, 
-            action: "requeue",
-        ];
 
         $.ajax({
             type: 'post',
