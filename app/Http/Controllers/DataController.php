@@ -257,7 +257,7 @@ class DataController extends Controller
         DB::table("scrapers")
             ->where("certificate_number", $request->certificate_number)
             ->update([
-                "statust" => 'QUEUED'
+                "status" => 'QUEUED'
             ]);
 
         return ["error" => false, "request" => $request ];
