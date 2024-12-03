@@ -170,7 +170,11 @@
 
         var defObject = $.Deferred();  // create a deferred object.
 
-        postData = { data: data, action: "requeue" };
+        postData = { 
+            data: data, 
+            action: "requeue",
+            _token: "{{ csrf_token() }}",            
+        };
 
         $.ajax({
             type: 'post',
