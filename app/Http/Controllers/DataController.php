@@ -249,7 +249,19 @@ class DataController extends Controller
     }
 
     function requeue( $request) {
-        return $request;
+
+        DB::table("certificates")
+            ->where("certificate_number", $request->certificate_number)
+            ->delete();
+        
+        DB::table("scrapers")
+            ->where("certificate_number", $request->certificate_number)
+            ->update([
+                "statust" => 'QUEUED'
+            ]);
+
+        return ["error" => false, "request" => $request ];
+
     }
 
 
