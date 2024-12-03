@@ -159,7 +159,7 @@
 
         $.when( certificate ).done( function( certificate ){
 
-            console.log( "REQUEUED" );
+            console.log( certificate );
 
         });
 

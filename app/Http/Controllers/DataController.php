@@ -163,12 +163,10 @@ class DataController extends Controller
                 break;
 
             case "order_downloaded":
-
                 return $this->orderDownloaded( $request->order_id );
                 break;
 
             case "requeue":
-
                 return $this->requeue( $request );
                 break;
 
