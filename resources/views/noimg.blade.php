@@ -154,9 +154,8 @@
     function requeue(data){
 
         console.log("REQUEUE");
-        console.log(data);
 
-        var certificate = postRequeue(data);
+        var certificate = postRequeue(data.certificate_number);
 
         $.when( certificate ).done( function( certificate ){
 
