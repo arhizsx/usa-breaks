@@ -96,6 +96,7 @@
             {
                 text: "Refresh",
                 hint: "Refresh",
+                class: "btn btn-sm",
                 onClick: function (e) {
                     requeue( e.row.data );
                     console.log(e.row.data);
