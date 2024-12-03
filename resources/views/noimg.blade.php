@@ -143,7 +143,7 @@
         },
         {
             dataField: 'updated_at',
-            caption: 'Added At'
+            caption: 'Added At',
             width: '150',
         }
     ];
