@@ -145,8 +145,6 @@
 
         let info = JSON.parse( JSON.stringify(data) );
 
-        // $(document).find(".imgFront").attr("src", info.certImgFront );
-        // $(document).find(".imgBack").attr("src", info.certImgBack );
 
         $(document).find("#card_details").find("#check_psa").attr("href", "https://www.psacard.com/cert/" + info.certificate_number + "/psa" )
 
@@ -154,8 +152,46 @@
     }
 
     function requeue(data){
+
         console.log("REQUEUE");
         console.log(data);
+
+        var certificate = postRequeue(data);
+
+        $.when( certificate ).done( function( certificate ){
+
+            console.log( "REQUEUED" );
+
+        });
+
+    }
+
+    function postRequeue(data){
+
+        var defObject = $.Deferred();  // create a deferred object.
+
+        postData = [
+            data: data,
+            action: "requeue"
+        ];
+
+        $.ajax({
+            type: 'post',
+            url: "/data/post",
+            data: postData,
+            enctype: 'multipart/form-data',
+            processData: false,
+            contentType: false,
+            success: function(resp){
+                defObject.resolve(resp);    //resolve promise and pass the response.
+            },
+            error: function(){
+                console.log("Error in AJAX");
+            }
+        });
+
+        return defObject.promise();
+
     }
 
 </script>
