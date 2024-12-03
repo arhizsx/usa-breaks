@@ -167,6 +167,11 @@ class DataController extends Controller
                 return $this->orderDownloaded( $request->order_id );
                 break;
 
+            case "requeue":
+
+                return $this->requeue( $request );
+                break;
+
             default:
                 return ["error"=> true, "message" => "Action not configured"];
         }
@@ -245,6 +250,9 @@ class DataController extends Controller
 
     }
 
+    function requeue( $request) {
+        return $request;
+    }
 
 
 }
