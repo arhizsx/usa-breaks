@@ -92,6 +92,7 @@
         {
             caption: "Action",
             type: "buttons",
+            width: 100,
             buttons: [
             {
                 text: "Refresh",
@@ -106,6 +107,7 @@
         {
             dataField: 'certificate_number',
             caption: 'Cert #',
+            width: 150,
             cellTemplate(container, options) {
                 if (options.value != null)  {
                     $('<div>')
