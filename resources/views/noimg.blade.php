@@ -104,7 +104,8 @@
         },
         {
             dataField: 'certificate_number',
-            caption: 'Back',
+            caption: 'Cert #',
+            width: 'auto',
             cellTemplate(container, options) {
                 if (options.value != null)  {
                     $('<div>')
