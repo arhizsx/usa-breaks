@@ -121,6 +121,7 @@
         {
             dataField: null,
             caption: 'Card',
+            width: 'auto',
             cellTemplate(container, options) {
                 if (options.data.data != null)  {
 
