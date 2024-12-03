@@ -175,16 +175,13 @@
         postData = { 
             data: data, 
             action: "requeue",
-            _token: $('meta[name="csrf-token"]').attr('content')
         };
 
         $.ajax({
             type: 'post',
             url: "/data/post",
             data: JSON.stringify(postData),
-            enctype: 'multipart/form-data',
-            processData: false,
-            contentType: false,
+            headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
             success: function(resp){
                 defObject.resolve(resp);    //resolve promise and pass the response.
             },
