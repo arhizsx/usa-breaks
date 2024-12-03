@@ -144,6 +144,7 @@
         {
             dataField: 'updated_at',
             caption: 'Added At'
+            width: '150',
         }
     ];
     let callback = '';
