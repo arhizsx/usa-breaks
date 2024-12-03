@@ -105,7 +105,6 @@
         {
             dataField: 'certificate_number',
             caption: 'Back',
-            width: 50,
             cellTemplate(container, options) {
                 if (options.value != null)  {
                     $('<div>')
