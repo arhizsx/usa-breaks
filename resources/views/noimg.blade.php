@@ -175,7 +175,7 @@
         $.when( certificate ).done( function( certificate ){
 
             console.log( certificate );
-            location.reload();
+            $("#gridContainer").dxDataGrid("instance").refresh(); // rebind the grid  
 
         });
 
