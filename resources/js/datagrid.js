@@ -9,6 +9,7 @@ $.fn.setDatagrid = function (modal, datasource, columns, callback = false) {
         selection: {
             mode: 'single',
         },
+        width: '100%',
         showBorders: true,
         columnHidingEnabled: true,
         columnAutoWidth: false,
