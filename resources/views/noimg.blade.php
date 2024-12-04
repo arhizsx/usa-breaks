@@ -97,7 +97,7 @@
             {
                 text: "Refresh",
                 hint: "Refresh",
-                class: "btn btn-sm",
+                class: "btn btn-sm btn-outline-primary",
                 onClick: function (e) {
                     requeue( e.row.data );
                     console.log(e.row.data);
