@@ -121,6 +121,10 @@
             },
         },
         {
+            dataField: 'cert_status',
+            caption: 'Status',
+        },
+        {
             dataField: null,
             caption: 'Card',
             cellTemplate(container, options) {
