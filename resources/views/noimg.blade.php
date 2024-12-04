@@ -9,7 +9,7 @@
         <div class="max-w-12xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
 
-                <div class="container-fluid p-4">
+                <div class="container-fluid p-0">
                     <div class="row">
                         <div class="col-xl-12">
                             <div id="gridContainer"></div>
