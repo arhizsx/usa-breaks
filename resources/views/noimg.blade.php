@@ -175,6 +175,7 @@
         $.when( certificate ).done( function( certificate ){
 
             console.log( certificate );
+            location.reload();
 
         });
 
