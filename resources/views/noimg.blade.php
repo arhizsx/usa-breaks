@@ -123,6 +123,7 @@
         {
             dataField: 'cert_status',
             caption: 'Status',
+            width: 100,
         },
         {
             dataField: null,
