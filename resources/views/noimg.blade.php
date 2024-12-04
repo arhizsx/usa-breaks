@@ -49,8 +49,8 @@
     let columns = [
         {
             dataField: 'order_id',
-            caption: 'Order #',
-            width: 80,
+            caption: '#',
+            width: 60,
         },
         {
             dataField: 'certImgFront',
