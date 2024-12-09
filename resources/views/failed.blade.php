@@ -76,28 +76,38 @@
             },
         },
         {
-            dataField: 'certificate_number',
-            caption: 'Certificate #',
-            width: 120,
+            caption: "Action",
+            type: "buttons",
+            width: 70,
+            buttons: [
+            {
+                text: "Refresh",
+                hint: "Refresh",
+                class: "btn btn-sm btn-outline-primary",
+                onClick: function (e) {
+                    requeue( e.row.data );
+                    console.log(e.row.data);
+                }
+            }]  
         },
         {
-            dataField: null,
-            caption: 'Card',
+            dataField: 'certificate_number',
+            caption: 'Cert #',
+            width: 80,
             cellTemplate(container, options) {
-                if (options.data.data != null)  {
-
-                    $('<div>').append(`${options.data.Year} `)
-                            .append(`${options.data.Brand} `)
-                            .append(`${options.data.Player} `)
-                            .append(`${options.data['Card Number']} `)
-                            .append(`${options.data['Variety/Pedigree']} `)
-                            .append(`${options.data['Grade']} `)
-                            .appendTo(container);
+                if (options.value != null)  {
+                    $('<div>')
+                    .append($('<a>', { 
+                        text: options.value, 
+                        href: `https://www.psacard.com/cert/${options.value}/psa`, 
+                        target: '_blank',
+                    }))
+                    .appendTo(container);
                 }
             },
         },
         {
-            dataField: 'updated_at',
+            dataField: 'created_at',
             caption: 'Added At'
         }
     ];
