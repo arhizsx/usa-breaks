@@ -104,5 +104,46 @@
         console.log( info );
     }
 
+    function requeue(data){
+
+        console.log("REQUEUE");
+
+        var certificate = postRequeue(data.certificate_number);
+
+        $.when( certificate ).done( function( certificate ){
+
+            console.log( certificate );
+            $("#gridContainer").dxDataGrid("instance").refresh(); // rebind the grid  
+
+        });
+
+    }
+
+    console.log($('meta[name="csrf-token"]').attr('content'));
+
+    function postRequeue(data){
+
+        var defObject = $.Deferred();  // create a deferred object.
+
+
+        $.ajax({
+            type: 'post',
+            url: "/data/post",
+            data: {
+                certificate_number: data,
+                action: "requeue",
+            },
+            headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
+            success: function(resp){
+                defObject.resolve(resp);    //resolve promise and pass the response.
+            },
+            error: function(){
+                console.log("Error in AJAX");
+            }
+        });
+
+        return defObject.promise();
+
+    }
 
 </script>
