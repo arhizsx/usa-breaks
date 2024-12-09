@@ -51,31 +51,6 @@
             width: 80,
         },
         {
-            dataField: 'certImgFront',
-            caption: 'Front',
-            width: 100,
-            cellTemplate(container, options) {
-                if (options.value != null)  {
-                    $('<div>')
-                    .append($('<img>', { src: options.value, alt: `Front of ${options.data.certificate_number}` }))
-                    .appendTo(container);
-                }
-            },
-
-        },
-        {
-            dataField: 'certImgBack',
-            caption: 'Back',
-            width: 100,
-            cellTemplate(container, options) {
-                if (options.value != null)  {
-                    $('<div>')
-                    .append($('<img>', { src: options.value, alt: `Front of ${options.data.certificate_number}` }))
-                    .appendTo(container);
-                }
-            },
-        },
-        {
             caption: "Action",
             type: "buttons",
             width: 70,
