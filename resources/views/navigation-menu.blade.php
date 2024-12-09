@@ -21,10 +21,10 @@
                     <x-nav-link href="{{ route('scraped') }}" :active="request()->routeIs('scraped')">
                         {{ __('Processed') }}
                     </x-nav-link>
+                    @if( Auth::user()->id == 1 )
                     <x-nav-link href="{{ route('failed') }}" :active="request()->routeIs('failed')">
                         {{ __('Failed') }}
                     </x-nav-link>
-                    @if( Auth::user()->id == 1 )
                     <x-nav-link href="{{ route('noimg') }}" :active="request()->routeIs('noimg')">
                         {{ __('No Img') }}
                     </x-nav-link>
@@ -165,10 +165,10 @@
             <x-responsive-nav-link href="{{ route('scraped') }}" :active="request()->routeIs('scraped')">
                 {{ __('Processed') }}
             </x-responsive-nav-link>
+            @if( Auth::user()->id == 1 )
             <x-responsive-nav-link href="{{ route('failed') }}" :active="request()->routeIs('failed')">
                 {{ __('Failed') }}
             </x-responsive-nav-link>
-            @if( Auth::user()->id == 1 )
             <x-responsive-nav-link href="{{ route('noimg') }}" :active="request()->routeIs('noimg')">
                 {{ __('No Img') }}
             </x-responsive-nav-link>
