@@ -286,4 +286,8 @@ class DataController extends Controller
 
     }
 
+    function api( Request $request ){
+        return $request;
+    }
+
 }
