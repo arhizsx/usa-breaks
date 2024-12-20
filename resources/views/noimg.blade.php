@@ -108,7 +108,7 @@
                     hint: "Tag as NO IMAGE",
                     cssClass: "btn btn-sm btn-dark text-white",
                     visible: function(e){
-                        if( e.row.data.cert_status != 'NO IMAGE'){
+                        if( e.row.data.cert_status != 'NO IMAGE' || e.row.data.cert_status != 'PARTIAL IMAGE'){
                             return true;
                         } else {
                             return false;
