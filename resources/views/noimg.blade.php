@@ -92,7 +92,7 @@
         {
             caption: "Action",
             type: "buttons",
-            width: 70,
+            width: 150,
             buttons: [
                 {
                     text: "Refresh",
