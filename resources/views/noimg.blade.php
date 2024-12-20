@@ -103,23 +103,6 @@
                         console.log(e.row.data);
                     }
                 },
-                {
-                    text: "Tag",
-                    hint: "Tag as NO IMAGE",
-                    class: "btn btn-sm btn-outline-primary",
-                    visible: function(options){
-                        if( options.data.cert_status != 'NO IMAGE'){
-                            return true;
-                        } else {
-                            return false;
-                        }
-                    },
-                    onClick: function (e) {
-                        requeue( e.row.data );
-                        console.log(e.row.data);
-                    }
-                },
-                
             ]  
         },
         {
