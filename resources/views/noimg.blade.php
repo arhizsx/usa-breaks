@@ -124,6 +124,21 @@
             dataField: 'cert_status',
             caption: 'Status',
             width: 100,
+            cellTemplate(container, options) {
+                if (options.value != 'NO IMAGE')  {
+                    $('<div>')
+                    .append($('<span>', { 
+                        text: options.value
+                    }))
+                    .appendTo(container);
+                } else {
+                    $('<div>')
+                    .append($('<a>', { 
+                        text: "TAG NO IMG", 
+                    }))
+                    .appendTo(container);
+                }
+            },
         },
         {
             dataField: null,
