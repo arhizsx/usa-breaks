@@ -170,6 +170,10 @@ class DataController extends Controller
                 return $this->requeue( $request );
                 break;
 
+            case "tag":
+                return $this->tag( $request );
+                break;
+
             default:
                 return ["error"=> true, "message" => "Action not configured"];
         }
@@ -264,5 +268,22 @@ class DataController extends Controller
 
     }
 
+    function tag( $request) {
+
+        DB::table("certificates")
+            ->where("certificate_number", $request->certificate_number)
+            ->update([
+                "status" => 'NO IMAGE'
+            ]);
+        
+        DB::table("scrapers")
+            ->where("certificate_number", $request->certificate_number)
+            ->update([
+                "status" => 'NO IMAGE'
+            ]);
+
+        return ["error" => false, "request" => $request ];
+
+    }
 
 }
