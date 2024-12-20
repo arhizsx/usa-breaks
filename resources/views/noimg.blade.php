@@ -94,15 +94,33 @@
             type: "buttons",
             width: 70,
             buttons: [
-            {
-                text: "Refresh",
-                hint: "Refresh",
-                class: "btn btn-sm btn-outline-primary",
-                onClick: function (e) {
-                    requeue( e.row.data );
-                    console.log(e.row.data);
-                }
-            }]  
+                {
+                    text: "Refresh",
+                    hint: "Refresh",
+                    class: "btn btn-sm btn-outline-primary",
+                    onClick: function (e) {
+                        requeue( e.row.data );
+                        console.log(e.row.data);
+                    }
+                },
+                {
+                    text: "Tag",
+                    hint: "Tag as NO IMAGE",
+                    class: "btn btn-sm btn-outline-primary",
+                    visible: function(options){
+                        if( options.data.cert_status != 'NO IMAGE'){
+                            return true;
+                        } else {
+                            return false;
+                        }
+                    },
+                    onClick: function (e) {
+                        requeue( e.row.data );
+                        console.log(e.row.data);
+                    }
+                },
+                
+            ]  
         },
         {
             dataField: 'certificate_number',
@@ -124,21 +142,6 @@
             dataField: 'cert_status',
             caption: 'Status',
             width: 100,
-            cellTemplate(container, options) {
-                if (options.value == 'NO IMAGE')  {
-                    $('<div>')
-                    .append($('<span>', { 
-                        text: options.value
-                    }))
-                    .appendTo(container);
-                } else {
-                    $('<div>')
-                    .append($('<a>', { 
-                        text: "TAG NO IMG", 
-                    }))
-                    .appendTo(container);
-                }
-            },
         },
         {
             dataField: null,
