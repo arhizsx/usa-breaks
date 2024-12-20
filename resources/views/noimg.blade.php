@@ -97,7 +97,7 @@
                 {
                     text: "Refresh",
                     hint: "Refresh",
-                    class: "btn btn-sm btn-outline-primary",
+                    cssClass: "btn btn-sm btn-outline-primary",
                     onClick: function (e) {
                         requeue( e.row.data );
                         console.log(e.row.data);
@@ -106,7 +106,7 @@
                 {
                     text: "Tag",
                     hint: "Tag as NO IMAGE",
-                    class: "btn btn-sm btn-outline-primary",
+                    cssClass: "btn btn-sm btn-outline-primary",
                     visible: function(e){
                         if( e.row.data.cert_status != 'NO IMAGE'){
                             return true;
