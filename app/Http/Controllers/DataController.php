@@ -254,6 +254,7 @@ class DataController extends Controller
 
     function requeue( $request) {
 
+        
         DB::table("certificates")
             ->where("certificate_number", $request->certificate_number)
             ->delete();
