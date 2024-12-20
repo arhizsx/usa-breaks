@@ -287,7 +287,25 @@ class DataController extends Controller
     }
 
     function api( Request $request ){
-        return $request;
+
+        $validated = $request->validate([
+            'action' => 'required',
+        ]);
+        
+        if( $validated ){
+
+            if( $request->action == 'requeue' ){
+                return $this->requeue( $request );
+            } else {
+                return $request;
+            }    
+
+        } else {
+
+            return $request;
+
+        }
+
     }
 
 }
