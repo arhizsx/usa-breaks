@@ -99,7 +99,7 @@
                     hint: "Refresh",
                     cssClass: "btn btn-sm btn-primary text-white",
                     onClick: function (e) {
-                        requeue( e.row.data );
+                        tag( e.row.data );
                         console.log(e.row.data);
                     }
                 },
@@ -189,6 +189,47 @@
         console.log( info );
     }
 
+    function tag(data){
+
+        console.log("TAG");
+
+        var certificate = postTag(data.certificate_number);
+
+        $.when( certificate ).done( function( certificate ){
+
+            console.log( certificate );
+            $("#gridContainer").dxDataGrid("instance").refresh(); // rebind the grid  
+
+        });
+
+    }
+
+    function postTag(data){
+
+        var defObject = $.Deferred();  // create a deferred object.
+
+
+        $.ajax({
+            type: 'post',
+            url: "/data/post",
+            data: {
+                certificate_number: data,
+                action: "tag",
+            },
+            headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
+            success: function(resp){
+                defObject.resolve(resp);    //resolve promise and pass the response.
+            },
+            error: function(){
+                console.log("Error in AJAX");
+            }
+        });
+
+        return defObject.promise();
+
+    }
+
+
     function requeue(data){
 
         console.log("REQUEUE");
@@ -203,8 +244,6 @@
         });
 
     }
-
-    console.log($('meta[name="csrf-token"]').attr('content'));
 
     function postRequeue(data){
 
