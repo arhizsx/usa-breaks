@@ -99,7 +99,7 @@
                     hint: "Refresh",
                     cssClass: "btn btn-sm btn-primary text-white",
                     onClick: function (e) {
-                        tag( e.row.data );
+                        requeue( e.row.data );
                         console.log(e.row.data);
                     }
                 },
@@ -115,7 +115,7 @@
                         }
                     },
                     onClick: function (e) {
-                        requeue( e.row.data );
+                        tag( e.row.data );
                         console.log(e.row.data);
                     }
                 },
