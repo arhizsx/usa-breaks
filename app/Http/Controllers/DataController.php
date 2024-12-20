@@ -254,7 +254,7 @@ class DataController extends Controller
 
     function requeue( $request) {
 
-        
+
         DB::table("certificates")
             ->where("certificate_number", $request->certificate_number)
             ->delete();
@@ -289,23 +289,11 @@ class DataController extends Controller
 
     function api( Request $request ){
 
-        $validated = $request->validate([
-            'action' => 'required',
-        ]);
-        
-        if( $validated ){
-
-            if( $request->action == 'requeue' ){
-                return $this->requeue( $request );
-            } else {
-                return $request;
-            }    
-
+        if( $request->action == 'requeue' ){
+            return $this->requeue( $request );
         } else {
-
             return $request;
-
-        }
+        }    
 
     }
 
