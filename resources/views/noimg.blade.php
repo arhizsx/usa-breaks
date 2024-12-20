@@ -125,7 +125,7 @@
             caption: 'Status',
             width: 100,
             cellTemplate(container, options) {
-                if (options.value != 'NO IMAGE')  {
+                if (options.value == 'NO IMAGE')  {
                     $('<div>')
                     .append($('<span>', { 
                         text: options.value
