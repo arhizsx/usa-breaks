@@ -38,6 +38,7 @@ class DataController extends Controller
                 if( Auth::user()->id == 1 ){
 
                     $data = Orders::whereNot("status", "ACTIVE")
+                        ->whereNot("REQUEUE")
                         ->orderBy("id", "desc")
                         ->get();
 
