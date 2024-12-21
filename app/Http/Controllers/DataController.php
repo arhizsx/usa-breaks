@@ -37,8 +37,7 @@ class DataController extends Controller
 
                 if( Auth::user()->id == 1 ){
 
-                    $data = Orders::whereNot("status", "ACTIVE")
-                        ->whereNot("REQUEUE")
+                    $data = Orders::whereNotIn("status", ["ACTIVE","REQUEUE"])
                         ->orderBy("id", "desc")
                         ->get();
 
