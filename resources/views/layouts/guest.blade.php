@@ -10,8 +10,8 @@
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
-        <link href="https://usa-breaks.com/css/app.css" rel="stylesheet" />
-        <link href="https://usa-breaks.com/js/app.js" />
+        <link href="https://usa-breaks-669015860017.us-central1.run.app/css/app.css" rel="stylesheet" />
+        <link href="https://usa-breaks-669015860017.us-central1.run.app/js/app.js" />
 
 
         <!-- Styles -->
