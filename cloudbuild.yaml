@@ -1,0 +1,8 @@
+steps:
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['build', '-t', 'gcr.io/$pristine-clone-400200/usa-breaks', '.']
+  - name: 'gcr.io/cloud-builders/gcloud'
+    args: ['run', 'deploy', 'usa-breaks', '--image', 'gcr.io/$pristine-clone-400200/usa-breaks', '--platform', 'managed', '--region', 'us-central1', '--allow-unauthenticated']
+
+images:
+  - 'gcr.io/$pristine-clone-400200/usa-breaks'
