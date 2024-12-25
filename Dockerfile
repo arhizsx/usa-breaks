@@ -12,7 +12,7 @@ RUN apk add --no-cache --update \
     python3 \
     py3-pip \    
     && docker-php-ext-configure gd --with-freetype --with-jpeg \
-    && docker-php-ext-install gd pdo pdo_mysql openssl \
+    && docker-php-ext-install gd pdo pdo_mysql \
     && rm -rf /var/cache/apk/*
 
 # Set the working directory in the container
