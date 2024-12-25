@@ -1,5 +1,6 @@
 import { defineConfig } from 'vite';
 import laravel from 'laravel-vite-plugin';
+import mkcert from 'vite-plugin-mkcert';
 
 export default defineConfig({
     plugins: [
@@ -17,6 +18,9 @@ export default defineConfig({
                 'resources/js/datagrid.js',
             ],
             refresh: true,
+
+
         }),
+        mkcert()
     ],
 });
