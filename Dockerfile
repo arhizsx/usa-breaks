@@ -12,7 +12,7 @@ RUN apk add --no-cache --update \
     python3 \
     py3-pip \    
     && docker-php-ext-configure gd --with-freetype --with-jpeg \
-    && docker-php-ext-install gd pdo pdo_mysql \
+    && docker-php-ext-install gd pdo pdo_mysql openssl \
     && rm -rf /var/cache/apk/*
 
 # Set the working directory in the container
@@ -28,7 +28,7 @@ COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 RUN composer install --optimize-autoloader --no-dev
 
 # Expose the port the app runs on
-EXPOSE 8080
+EXPOSE 443
 
 # Set environment variable for production
 ENV APP_ENV=debug
@@ -36,5 +36,5 @@ ENV APP_ENV=debug
 RUN chown -R www-data:www-data /var/www/storage /var/www/bootstrap/cache
 
 # Run artisan optimize during the container startup
-CMD ["sh", "-c", "php artisan optimize && php artisan serve --host=0.0.0.0 --port=8080"]
+CMD ["sh", "-c", "php artisan optimize && php artisan serve --host=0.0.0.0 --port=443"]
 
