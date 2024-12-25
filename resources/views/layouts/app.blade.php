@@ -15,8 +15,10 @@
         <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
 
         <script src="https://kit.fontawesome.com/65ee368307.js" crossorigin="anonymous"></script>
+        <link href="/app.css" rel="stylesheet" />
+
         <!-- Scripts -->
-        @vite(['resources/css/app.css', 'resources/js/app.js', 'resources/js/datagrid.js'])
+        @vite(['resources/js/app.js', 'resources/js/datagrid.js'])
 
         <!-- Styles -->
         @livewireStyles
