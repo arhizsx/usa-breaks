@@ -25,6 +25,11 @@ COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 # Install Laravel dependencies
 RUN composer install --optimize-autoloader --no-dev
 
+# Set environment variables for production
+ENV APP_ENV=production \
+    APP_URL=https://usa-breaks-669015860017.us-central1.run.app/ \
+    APP_DEBUG=false
+
 # Expose the port the app runs on
 EXPOSE 8080
 
