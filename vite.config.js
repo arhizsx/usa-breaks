@@ -6,12 +6,6 @@ export default defineConfig({
     plugins: [
 
         laravel({
-            server: {
-                https: true,
-                hmr: {
-                    protocol: 'wss', // Use WebSocket Secure
-                },
-            },
             input: [
                 'resources/css/app.css',
                 'resources/js/app.js',
