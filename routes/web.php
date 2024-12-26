@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DataController;
 use App\Http\Controllers\DownloadController;
+use App\Http\Controllers\ImageDownloadController;
 
 Route::group(['middleware' => ['auth', 'verified']], function () {
 
@@ -36,6 +37,7 @@ Route::group(['middleware' => ['auth', 'verified']], function () {
 
     Route::get('/download/{order_id}',  [DataController::class, 'download']);
 
+    Route::get('/download-images/{order_id}', [ImageDownloadController::class, 'downloadImages']);
 
 });
 
