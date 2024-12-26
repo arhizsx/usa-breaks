@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 use ZipArchive;
+use GuzzleHttp\Client;
 
 class ImageDownloadController extends Controller
 {
@@ -24,11 +25,14 @@ class ImageDownloadController extends Controller
             return response()->json(['message' => 'Failed to create temporary directory.'], 500);
         }
 
+        $client = new Client();
+
         // Download images and rename them
         foreach ($rows as $row) {
             try {
 
-                $imageContent = file_get_contents($row->certImgFront);
+                $imageContent = $client->get($row->certImgFront)->getBody();
+
                 $filename = $tempDir . '/' . Str::slug($row->certificate_number) . 'A.' . pathinfo($row->certImgFront, PATHINFO_EXTENSION);
                 file_put_contents($filename, $imageContent);
             } catch (\Exception $e) {
@@ -37,13 +41,13 @@ class ImageDownloadController extends Controller
 
             try {
 
-                $imageContent = file_get_contents($row->certImgBack);
+                $imageContent = $client->get($row->certImgFront)->getBody();
                 $filename = $tempDir . '/' . Str::slug($row->certificate_number) . 'B.' . pathinfo($row->certImgBack, PATHINFO_EXTENSION);
                 file_put_contents($filename, $imageContent);
             } catch (\Exception $e) {
                 return response()->json(['message' => 'Error downloading image: ' . $row->certImgBack], 500);
             }
-            
+
         }
 
         // Create a zip file
