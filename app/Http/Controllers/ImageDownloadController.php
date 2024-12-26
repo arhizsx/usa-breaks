@@ -18,15 +18,17 @@ class ImageDownloadController extends Controller
         if ($rows->isEmpty()) {
             return response()->json(['message' => 'No images found for this order.'], 404);
         }
-
         // Create a unique temporary directory
         $tempDir = storage_path('app/temp/' . Str::uuid());
-        if (!Storage::makeDirectory($tempDir)) {
-            return response()->json(['message' => 'Failed to create temporary directory.'], 500);
+        
+        // Check if the directory exists, if not, create it
+        if (!file_exists($tempDir)) {
+            if (!mkdir($tempDir, 0755, true)) {
+                return response()->json(['message' => 'Failed to create temporary directory.'], 500);
+            }
         }
 
-        return $tempDir;
-
+        
         $client = new Client();
 
         // Download images and rename them
