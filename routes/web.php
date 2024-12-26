@@ -39,5 +39,15 @@ Route::group(['middleware' => ['auth', 'verified']], function () {
 
     Route::get('/download-images/{order_id}', [ImageDownloadController::class, 'downloadImages']);
 
+    Route::get('/test-storage', function () {
+        $filePath = storage_path('app/test.txt');
+        try {
+            file_put_contents($filePath, 'This is a test.');
+            return response()->json(['message' => 'Storage is writable']);
+        } catch (\Exception $e) {
+            return response()->json(['error' => $e->getMessage()]);
+        }
+    });
+
 });
 
