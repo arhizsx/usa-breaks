@@ -25,6 +25,8 @@ class ImageDownloadController extends Controller
             return response()->json(['message' => 'Failed to create temporary directory.'], 500);
         }
 
+        return $tempDir;
+
         $client = new Client();
 
         // Download images and rename them
@@ -36,7 +38,7 @@ class ImageDownloadController extends Controller
                 $filename = $tempDir . '/' . Str::slug($row->certificate_number) . '.' . pathinfo($row->certImgFront, PATHINFO_EXTENSION);
 
                 return $filename;
-                
+
                 file_put_contents($filename, $imageContent);
             } catch (\Exception $e) {
                 return response()->json(['message' => 'Error downloading image: ' . $row->certImgFront], 500);
