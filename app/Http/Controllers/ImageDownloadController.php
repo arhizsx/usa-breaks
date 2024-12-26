@@ -33,8 +33,8 @@ class ImageDownloadController extends Controller
 
                 $imageContent = $client->get($row->certImgFront)->getBody();
 
-                $filename = $tempDir . '/' . Str::slug($row->certificate_number) . 'A.' . pathinfo($row->certImgFront, PATHINFO_EXTENSION);
-                file_put_contents($filename, $imageContent);
+                return $imageContent;
+
             } catch (\Exception $e) {
                 return response()->json(['message' => 'Error downloading image: ' . $row->certImgFront], 500);
             }
@@ -42,7 +42,7 @@ class ImageDownloadController extends Controller
             try {
 
                 $imageContent = $client->get($row->certImgFront)->getBody();
-                $filename = $tempDir . '/' . Str::slug($row->certificate_number) . 'B.' . pathinfo($row->certImgBack, PATHINFO_EXTENSION);
+                $filename = $tempDir . '/' . Str::slug($row->certificate_number) . '.' . pathinfo($row->certImgBack, PATHINFO_EXTENSION);
                 file_put_contents($filename, $imageContent);
             } catch (\Exception $e) {
                 return response()->json(['message' => 'Error downloading image: ' . $row->certImgBack], 500);
