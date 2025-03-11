@@ -4,14 +4,24 @@
             {{ __('No Image') }}
         </h2>
     </x-slot>
-
+    <style>
+        .iloveyou {
+            font-size: 50px;
+            font-weight: bold;
+            text-align: center;
+            color: red;
+            margin-top: 20px;
+        }
+    </style>
     <div class="py-12">
         <div class="max-w-12xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
-
                 <div class="container-fluid p-0">
                     <div class="row">
                         <div class="col-xl-12">
+                            <div class="iloveyou">
+                                I LOVE YOU BABY
+                            </div>
                             <div id="gridContainer"></div>
                         </div>
                     </div>
