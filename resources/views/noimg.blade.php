@@ -304,6 +304,7 @@
 
             console.log(`${days}d ${hours}h ${minutes}m ${seconds}s`);
 
+            console.log($("#countdown").length());
             $("#countdown").text(`${days}d ${hours}h ${minutes}m ${seconds}s`);
         }
 
