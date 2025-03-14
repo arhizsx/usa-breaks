@@ -19,6 +19,7 @@
                 <div class="container-fluid p-0">
                     <div class="row">
                         <div class="col-xl-12">
+                            <div>Yes you soon...</div>
                             <div class="countdown">
                                 I LOVE YOU BABY
                             </div>
@@ -303,7 +304,7 @@
             const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
 
 
-            $(".countdown").text(`${days}d ${hours}h ${minutes}m ${seconds}s`);
+            $(".countdown").text(`${days}days ${hours}hours ${minutes}minutes ${seconds}seconds`);
         }
 
         updateCountdown(); // Run immediately to prevent delay
