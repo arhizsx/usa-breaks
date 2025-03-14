@@ -5,8 +5,8 @@
         </h2>
     </x-slot>
     <style>
-        .iloveyou {
-            font-size: 50px;
+        .countdown {
+            font-size: 40px;
             font-weight: bold;
             text-align: center;
             color: red;
@@ -19,7 +19,7 @@
                 <div class="container-fluid p-0">
                     <div class="row">
                         <div class="col-xl-12">
-                            <div class="iloveyou">
+                            <div class="countdown">
                                 I LOVE YOU BABY
                             </div>
                             <div id="gridContainer"></div>
@@ -280,4 +280,29 @@
 
     }
 
+
 </script>
+<script>
+        $(document).ready(function() {
+            function updateCountdown() {
+                var endDate = new Date("May 3, 2025 00:00:00").getTime();
+                var now = new Date().getTime();
+                var timeLeft = endDate - now;
+
+                if (timeLeft <= 0) {
+                    $("#countdown").html("Countdown Ended!");
+                    return;
+                }
+
+                var days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+                var hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                var minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+                var seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+                $("#countdown").html(days + "d " + hours + "h " + minutes + "m " + seconds + "s");
+            }
+
+            setInterval(updateCountdown, 1000);
+            updateCountdown(); // Initial call to avoid 1-second delay
+        });
+    </script>
