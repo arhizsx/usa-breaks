@@ -304,7 +304,7 @@
             const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
 
 
-            $(".countdown").text(`${days}days ${hours}hours ${minutes}minutes ${seconds}seconds`);
+            $(".countdown").text(`${days} days ${hours} hours ${minutes} minutes ${seconds} seconds`);
         }
 
         updateCountdown(); // Run immediately to prevent delay
