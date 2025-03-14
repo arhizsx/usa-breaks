@@ -19,7 +19,7 @@
                 <div class="container-fluid p-0">
                     <div class="row">
                         <div class="col-xl-12">
-                            <div>Yes you soon...</div>
+                            <div class="text-center" style="font-size: 1em; color: black;">Yes you soon...</div>
                             <div class="countdown">
                                 I LOVE YOU BABY
                             </div>
