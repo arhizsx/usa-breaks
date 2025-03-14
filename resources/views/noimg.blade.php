@@ -291,7 +291,7 @@
             const timeLeft = endDate - now;
 
             if (timeLeft <= 0) {
-                $("#countdown").text("Countdown Ended!");
+                $(".countdown").text("Countdown Ended!");
                 clearInterval(timer);
                 return;
             }
@@ -302,10 +302,8 @@
             const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
             const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
 
-            console.log(`${days}d ${hours}h ${minutes}m ${seconds}s`);
 
-            console.log($("#countdown").length);
-            $("#countdown").text(`${days}d ${hours}h ${minutes}m ${seconds}s`);
+            $(".countdown").text(`${days}d ${hours}h ${minutes}m ${seconds}s`);
         }
 
         updateCountdown(); // Run immediately to prevent delay
