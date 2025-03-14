@@ -282,27 +282,29 @@
 
 
 </script>
+
 <script>
-        $(document).ready(function() {
-            function updateCountdown() {
-                var endDate = new Date("May 3, 2025 00:00:00").getTime();
-                var now = new Date().getTime();
-                var timeLeft = endDate - now;
+    $(function() { // Shorter document ready function
+        function updateCountdown() {
+            const endDate = new Date("2025-05-03T00:00:00").getTime();
+            const now = Date.now();
+            const timeLeft = endDate - now;
 
-                if (timeLeft <= 0) {
-                    $("#countdown").html("Countdown Ended!");
-                    return;
-                }
-
-                var days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-                var hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                var minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-                var seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
-
-                $("#countdown").html(days + "d " + hours + "h " + minutes + "m " + seconds + "s");
+            if (timeLeft <= 0) {
+                $("#countdown").text("Countdown Ended!");
+                clearInterval(timer);
+                return;
             }
 
-            setInterval(updateCountdown, 1000);
-            updateCountdown(); // Initial call to avoid 1-second delay
-        });
-    </script>
+            const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+            $("#countdown").text(`${days}d ${hours}h ${minutes}m ${seconds}s`);
+        }
+
+        updateCountdown(); // Run immediately to prevent delay
+        const timer = setInterval(updateCountdown, 1000);
+    });
+</script>
